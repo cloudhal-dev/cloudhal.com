@@ -1,0 +1,23 @@
+---
+/**
+ * The marketing hero: the page's `hero` section (heading, subheading, one call to action), set
+ * large with a soft brand glow. Words come from the page; nothing here is hard-coded copy.
+ */
+import type { HeroSection } from "@cloudhal/core-contracts";
+import { external, href } from "./href.ts";
+
+interface Props {
+  section: HeroSection;
+}
+const { section } = Astro.props;
+const cta = section.cta ? href(section.cta.href) : undefined;
+---
+<section class="mk-hero" data-section-id={section.id} data-kind="hero">
+  <h1 class="mk-hero__title">{section.heading}</h1>
+  {section.subheading && <p class="mk-hero__sub">{section.subheading}</p>}
+  {section.cta && cta && (
+    <p class="mk-hero__actions">
+      <a class="mk-button mk-button--primary" href={cta} rel={external(cta) ? "noopener" : undefined}>{section.cta.label}</a>
+    </p>
+  )}
+</section>

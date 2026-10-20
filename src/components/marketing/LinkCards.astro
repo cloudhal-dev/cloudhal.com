@@ -1,0 +1,37 @@
+---
+/** The `link-cards` block (src/blocks.ts): cards that lead to docs, code or a demo. */
+import { renderIcon } from "@cloudhal/core-ts/icons";
+import { iconSet } from "../../icons.ts";
+import { external, href } from "./href.ts";
+
+interface Item {
+  title: string;
+  body?: string;
+  href: string;
+  label?: string;
+}
+interface Props {
+  props: { heading?: string; items: Item[] };
+}
+const { props } = Astro.props;
+const arrow = renderIcon("arrow-right", { set: iconSet });
+---
+<div class="mk-band">
+  {props.heading && <h2 class="mk-heading">{props.heading}</h2>}
+  <ul class="mk-grid">
+    {props.items.map((item) => {
+      const link = href(item.href);
+      return (
+        link && (
+          <li class="mk-card mk-card--link">
+            <a href={link} rel={external(link) ? "noopener" : undefined}>
+              <h3>{item.title}</h3>
+              {item.body && <p>{item.body}</p>}
+              <span class="mk-card__more">{item.label ?? item.title}<Fragment set:html={arrow} /></span>
+            </a>
+          </li>
+        )
+      );
+    })}
+  </ul>
+</div>

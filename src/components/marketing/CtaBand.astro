@@ -1,0 +1,26 @@
+---
+/** The `cta-band` block (src/blocks.ts): a closing call to action with up to two buttons. */
+import { external, href } from "./href.ts";
+
+interface Props {
+  props: {
+    heading: string;
+    body?: string;
+    primaryLabel: string;
+    primaryHref: string;
+    secondaryLabel?: string;
+    secondaryHref?: string;
+  };
+}
+const { props } = Astro.props;
+const primary = href(props.primaryHref);
+const secondary = href(props.secondaryHref);
+---
+<div class="mk-cta">
+  <h2>{props.heading}</h2>
+  {props.body && <p>{props.body}</p>}
+  <p class="mk-hero__actions">
+    {primary && <a class="mk-button mk-button--primary" href={primary} rel={external(primary) ? "noopener" : undefined}>{props.primaryLabel}</a>}
+    {props.secondaryLabel && secondary && <a class="mk-button mk-button--ghost" href={secondary} rel={external(secondary) ? "noopener" : undefined}>{props.secondaryLabel}</a>}
+  </p>
+</div>

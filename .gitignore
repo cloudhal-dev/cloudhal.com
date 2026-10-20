@@ -1,0 +1,7 @@
+dist/
+.astro/
+# The local store (SQLite + blobs) and deploy state/secrets. Content is rebuilt with `pnpm seed`.
+.cloudhal/
+node_modules/
+.wrangler/
+# cloudhal.json is committed here (the starter ignores it): it carries the domain and settings.

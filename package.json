@@ -1,0 +1,31 @@
+{
+  "name": "cloudhal-com",
+  "version": "0.0.1",
+  "private": true,
+  "description": "cloudhal.com — the Cloudhal marketing site, built with Cloudhal (theme: cloudhal-marketing).",
+  "type": "module",
+  "scripts": {
+    "seed": "node scripts/seed.ts",
+    "dev": "cloudhal dev",
+    "build": "cloudhal build",
+    "studio": "cloudhal studio",
+    "snapshot": "cloudhal snapshot",
+    "mcp": "cloudhal mcp",
+    "astro": "astro"
+  },
+  "//": "TODO(npm): @cloudhal/* are linked from a sibling checkout of cloudhal-dev/cloudhal until they are published; switch to the released versions (pin the stable tag this site deploys from).",
+  "dependencies": {
+    "@cloudhal/astro-renderer": "link:../cloudhal-dev/packages/astro-renderer",
+    "@cloudhal/core-ts": "link:../cloudhal-dev/packages/core-ts",
+    "@cloudhal/cli": "link:../cloudhal-dev/packages/cli",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "7.3.6",
+    "better-sqlite3": "13.0.3",
+    "tailwindcss": "^4.3.3",
+    "@astrojs/cloudflare": "14.3.4"
+  },
+  "devDependencies": {
+    "@cloudhal/cloudflare": "link:../cloudhal-dev/packages/cloudflare",
+    "wrangler": "4.148.0"
+  }
+}
