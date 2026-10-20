@@ -3,3 +3,16 @@ allowBuilds:
   esbuild: true
   better-sqlite3: true
   workerd: true
+minimumReleaseAgeExclude:
+  - '@cloudhal/agent-runtime@0.1.1'
+  - '@cloudhal/analytics@0.1.1'
+  - '@cloudhal/api@0.1.1'
+  - '@cloudhal/astro-renderer@0.1.1'
+  - '@cloudhal/cli@0.1.1'
+  - '@cloudhal/cloudflare@0.1.1'
+  - '@cloudhal/comments@0.1.1'
+  - '@cloudhal/core-contracts@0.1.1'
+  - '@cloudhal/core-ts@0.1.1'
+  - '@cloudhal/mcp-server@0.1.1'
+  - '@cloudhal/schedules@0.1.1'
+  - '@cloudhal/storage@0.1.1'
