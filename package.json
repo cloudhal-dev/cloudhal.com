@@ -26,6 +26,6 @@
   },
   "devDependencies": {
     "@cloudhal/cloudflare": "link:../cloudhal-dev/packages/cloudflare",
-    "wrangler": "4.148.0"
+    "wrangler": "^4.151.0"
   }
 }

@@ -37,6 +37,13 @@ Friction found while building cloudhal.com with Cloudhal, as a new user would. E
 20. **`cloudhal render` is great** — it caught a 3.1:1 contrast on our eyebrow text at once. Two nits: the Astro dev toolbar shows up in its screenshots, and it printed paths relative to the project (`../../../../private/tmp/…`).
 21. **Dev noise:** every `cloudhal dev` start warns "getStaticPaths() ignored in dynamic page" and Astro's "new version available".
 
+### First deploy (workers.dev preview, 2026-10-20)
+
+22. **Pinning wrangler to the monorepo's catalog (4.148.0) broke the deploy:** `@astrojs/cloudflare` 14.3.4 pulls `@cloudflare/vite-plugin` 1.64, which asserts wrangler `^4.151.0` — after D1 and R2 were already created. *Here:* `wrangler ^4.151.0`; the re-run reused the database and bucket. *Upstream:* the catalog's wrangler is behind its own adapter; `deploy --dry-run` would have caught it but needs a fresh Studio build first.
+23. **`deploy --dry-run --no-build-studio` refuses** when `apps/studio/dist` is older than generated i18n params, so a dry run from a linked checkout rebuilds Studio inside the monorepo.
+24. **The workers.dev preview is indexable:** no `noindex` meta or header and `robots.txt` says `Allow: /`, though `docs/guides/multi-site.md` says the workers.dev address is marked `noindex`. Canonical links point at `https://cloudhal.com`, which limits the damage.
+25. **The owner setup link is printed to the terminal** with its token in the URL fragment; fine locally, easy to leak into CI logs.
+
 ### Content decisions (not friction)
 
 - Pricing says "Hosted control plane — coming" with no product name: ADR-0037's amendment removed product names pending a trademark check.
