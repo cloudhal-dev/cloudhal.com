@@ -6,5 +6,8 @@
   },
   "comments": {
     "available": false
+  },
+  "domains": {
+    "site": "cloudhal.com"
   }
 }
