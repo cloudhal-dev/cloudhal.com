@@ -14,9 +14,9 @@
     "deploy": "cloudhal deploy && node scripts/post-deploy-check.mjs"
   },
   "dependencies": {
-    "@cloudhal/astro-renderer": "0.3.6",
-    "@cloudhal/core-ts": "0.3.6",
-    "@cloudhal/cli": "0.3.6",
+    "@cloudhal/astro-renderer": "0.3.7",
+    "@cloudhal/core-ts": "0.3.7",
+    "@cloudhal/cli": "0.3.7",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "7.3.6",
     "better-sqlite3": "13.0.3",
@@ -24,7 +24,7 @@
     "@astrojs/cloudflare": "14.3.4"
   },
   "devDependencies": {
-    "@cloudhal/cloudflare": "0.3.6",
+    "@cloudhal/cloudflare": "0.3.7",
     "wrangler": "^4.151.0"
   },
   "packageManager": "pnpm@12.10.1"
