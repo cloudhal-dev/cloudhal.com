@@ -1,0 +1,19 @@
+---
+/** The `steps` block (src/blocks.ts): a numbered sequence. */
+interface Props {
+  props: { eyebrow?: string; heading: string; items: { title: string; body: string }[] };
+}
+const { props } = Astro.props;
+---
+<div class="mk-band">
+  {props.eyebrow && <p class="mk-eyebrow">{props.eyebrow}</p>}
+  <h2 class="mk-heading">{props.heading}</h2>
+  <ol class="mk-steps">
+    {props.items.map((item) => (
+      <li class="mk-step">
+        <h3>{item.title}</h3>
+        <p>{item.body}</p>
+      </li>
+    ))}
+  </ol>
+</div>

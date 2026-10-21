@@ -1,0 +1,20 @@
+# New Cloudhal releases arrive as one PR bumping every @cloudhal/* package together.
+# .github/workflows/cloudhal-update.yml checks it and merges patch releases on its own;
+# merging to main deploys through Workers Builds.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+      time: "06:00"
+      timezone: Europe/Istanbul
+    allow:
+      - dependency-name: "@cloudhal/*"
+    groups:
+      cloudhal:
+        patterns: ["@cloudhal/*"]
+    versioning-strategy: increase
+    open-pull-requests-limit: 2
+    commit-message:
+      prefix: chore

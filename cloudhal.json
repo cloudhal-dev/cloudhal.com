@@ -1,0 +1,13 @@
+{
+  "siteId": "site_8DTHH9QRG8CAMYKHENBW",
+  "dataDir": ".cloudhal",
+  "analytics": {
+    "enabled": true
+  },
+  "comments": {
+    "available": false
+  },
+  "domains": {
+    "site": "cloudhal.com"
+  }
+}

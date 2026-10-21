@@ -1,0 +1,31 @@
+{
+  "name": "cloudhal-com",
+  "version": "0.0.1",
+  "private": true,
+  "description": "cloudhal.com: the Cloudhal marketing site's theme and configuration. The content lives in Cloudhal.",
+  "type": "module",
+  "scripts": {
+    "dev": "cloudhal dev",
+    "build": "cloudhal build",
+    "studio": "cloudhal studio",
+    "snapshot": "cloudhal snapshot",
+    "mcp": "cloudhal mcp",
+    "astro": "astro",
+    "deploy": "cloudhal deploy && node scripts/post-deploy-check.mjs"
+  },
+  "dependencies": {
+    "@cloudhal/astro-renderer": "0.3.4",
+    "@cloudhal/core-ts": "0.3.4",
+    "@cloudhal/cli": "0.3.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "7.3.6",
+    "better-sqlite3": "13.0.3",
+    "tailwindcss": "^4.3.3",
+    "@astrojs/cloudflare": "14.3.4"
+  },
+  "devDependencies": {
+    "@cloudhal/cloudflare": "0.3.4",
+    "wrangler": "^4.151.0"
+  },
+  "packageManager": "pnpm@12.10.1"
+}

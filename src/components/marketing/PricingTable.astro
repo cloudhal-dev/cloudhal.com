@@ -1,0 +1,37 @@
+---
+/** The `pricing-table` block (src/blocks.ts): plans side by side. */
+import { external, href } from "./href.ts";
+
+interface Plan {
+  name: string;
+  price: string;
+  note?: string;
+  summary?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  highlight?: boolean;
+}
+interface Props {
+  props: { heading: string; intro?: string; plans: Plan[] };
+}
+const { props } = Astro.props;
+---
+<div class="mk-band">
+  <h2 class="mk-heading">{props.heading}</h2>
+  {props.intro && <p class="mk-intro">{props.intro}</p>}
+  <ul class="mk-plans">
+    {props.plans.map((plan) => {
+      const link = href(plan.ctaHref);
+      return (
+        <li class:list={["mk-plan", { "mk-plan--highlight": plan.highlight }]}>
+          <h3>{plan.name}</h3>
+          <p class="mk-plan__price">{plan.price}{plan.note && <span>{plan.note}</span>}</p>
+          {plan.summary && <p>{plan.summary}</p>}
+          {plan.ctaLabel && link && (
+            <a class:list={["mk-button", plan.highlight ? "mk-button--primary" : "mk-button--ghost"]} href={link} rel={external(link) ? "noopener" : undefined}>{plan.ctaLabel}</a>
+          )}
+        </li>
+      );
+    })}
+  </ul>
+</div>
