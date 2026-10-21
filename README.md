@@ -39,4 +39,4 @@ The deployment token comes from a local `cloudhal deploy` (`.cloudhal/deploy/sec
 
 ## Domains
 
-`cloudhal.com` serves the site; Studio runs on the admin Worker's workers.dev address. `www.cloudhal.com` should 301 to `https://cloudhal.com` through a Cloudflare Redirect Rule on the zone.
+`cloudhal.com` serves the site and `studio.cloudhal.com` serves Studio (`domains` in `cloudhal.json`; the deploy adds both as Workers custom domains, which turns the workers.dev addresses off). `www.cloudhal.com` should 301 to `https://cloudhal.com` through a Cloudflare Redirect Rule on the zone.

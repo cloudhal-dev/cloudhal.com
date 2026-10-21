@@ -8,6 +8,7 @@
     "available": false
   },
   "domains": {
-    "site": "cloudhal.com"
+    "site": "cloudhal.com",
+    "studio": "studio.cloudhal.com"
   }
 }
