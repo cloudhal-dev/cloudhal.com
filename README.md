@@ -39,4 +39,4 @@ The deployment token comes from a local `cloudhal deploy` (`.cloudhal/deploy/sec
 
 ## Domains
 
-`cloudhal.com` serves the site and `studio.cloudhal.com` serves Studio (`domains` in `cloudhal.json`; the deploy adds both as Workers custom domains, which turns the workers.dev addresses off). `www.cloudhal.com` should 301 to `https://cloudhal.com` through a Cloudflare Redirect Rule on the zone.
+`cloudhal.com` serves the site and `studio.cloudhal.com` serves Studio (`domains` in `cloudhal.json`; the deploy adds both as Workers custom domains, which turns the workers.dev addresses off). `www.cloudhal.com` answers with a 301 to `https://cloudhal.com` (path and query kept): `domains.redirects` in `cloudhal.json`, set with `cloudhal domain set cloudhal.com --redirect www.cloudhal.com`, served by the site Worker as a custom domain. Adding a new redirect host needs a deploy with zone permissions (a local `cloudhal deploy`); the Workers Builds token only redeploys existing domains.
