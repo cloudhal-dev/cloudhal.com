@@ -15,9 +15,9 @@
   },
   "//": "TODO(npm): @cloudhal/* are linked from a sibling checkout of cloudhal-dev/cloudhal until they are published; switch to the released versions (pin the stable tag this site deploys from).",
   "dependencies": {
-    "@cloudhal/astro-renderer": "0.3.3",
-    "@cloudhal/core-ts": "0.3.3",
-    "@cloudhal/cli": "0.3.3",
+    "@cloudhal/astro-renderer": "0.3.4",
+    "@cloudhal/core-ts": "0.3.4",
+    "@cloudhal/cli": "0.3.4",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "7.3.6",
     "better-sqlite3": "13.0.3",
@@ -25,7 +25,7 @@
     "@astrojs/cloudflare": "14.3.4"
   },
   "devDependencies": {
-    "@cloudhal/cloudflare": "0.3.3",
+    "@cloudhal/cloudflare": "0.3.4",
     "wrangler": "^4.151.0"
   }
 }
