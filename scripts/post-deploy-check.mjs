@@ -1,15 +1,15 @@
 // After `cloudhal deploy` in Workers Builds: the site and Studio must answer. If either does not
-// within ~2 minutes, both Workers are rolled back to their previous version and the build fails,
-// so a bad release never stays live on cloudhal.com.
+// within ~3 minutes (a new custom domain may still wait for its certificate), both Workers are
+// rolled back to their previous version and the build fails, so a bad release never stays live.
 import { execFileSync } from "node:child_process";
 
 const CHECKS = [
   { name: "site", url: "https://cloudhal.com/", worker: "cloudhal-com-site" },
-  { name: "studio", url: "https://cloudhal-com-admin.yemek.workers.dev/api/health", worker: "cloudhal-com-admin" },
+  { name: "studio", url: "https://studio.cloudhal.com/api/health", worker: "cloudhal-com-admin" },
 ];
 
 async function healthy(url) {
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 18; i++) {
     try {
       const res = await fetch(url, { redirect: "manual", headers: { "cache-control": "no-cache" } });
       if (res.status === 200) return true;
