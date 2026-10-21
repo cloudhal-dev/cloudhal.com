@@ -1,9 +1,10 @@
 ---
 /**
- * The `lens-hero` block (src/blocks.ts): the brand lens as a living scene beside the headline.
- * The lens follows the pointer, breathes, narrows as the hero scrolls away and takes the colour of
- * the activity log's current line (lens.ts). Every word comes from the block's props. Without
- * JavaScript, at motion "none" or under reduced motion it is a still lens with the whole log shown.
+ * The `lens-hero` block (src/blocks.ts): the brand lens as a page's opening scene. The lens sits
+ * between the headline and the actions and comes out of the dark: it lights up once, then its
+ * light slowly swells and fades, follows the pointer a little and dims as the page scrolls on
+ * (lens.ts). Under it, one line of the activity log at a time. Every word comes from the props.
+ * Without JavaScript, at motion "none" or under reduced motion: a still, lit lens and the whole log.
  */
 import { external, href } from "./href.ts";
 
@@ -34,89 +35,79 @@ const parts =
   at >= 0 && props.highlight
     ? [props.heading.slice(0, at), props.highlight, props.heading.slice(at + props.highlight.length)]
     : [props.heading, "", ""];
-
-// The instrument ring: 72 ticks, every sixth one long.
-const ticks = Array.from({ length: 72 }, (_, i) => ({ angle: i * 5, long: i % 6 === 0 }));
-// Fine radial fibres of the iris.
-const fibres = Array.from({ length: 60 }, (_, i) => i * 6);
 const first = props.log[0]?.state ?? "watching";
 ---
 <section class="mk-lens" data-lens data-state={first} aria-labelledby="mk-lens-title">
-  <div class="mk-lens__sky" aria-hidden="true">
-    <span class="mk-lens__cloud mk-lens__cloud--a"></span>
-    <span class="mk-lens__cloud mk-lens__cloud--b"></span>
-    <span class="mk-lens__cloud mk-lens__cloud--c"></span>
-    <span class="mk-lens__grid"></span>
-  </div>
   <div class="mk-lens__inner">
-    <div class="mk-lens__copy">
+    <div class="mk-lens__top">
       {props.eyebrow && <p class="mk-lens__eyebrow">{props.eyebrow}</p>}
       <h1 id="mk-lens-title" class="mk-lens__title">
         {parts[0]}{parts[1] && <span class="mk-lens__highlight">{parts[1]}</span>}{parts[2]}
       </h1>
-      {props.body && <p class="mk-lens__body">{props.body}</p>}
+    </div>
+    <div class="mk-lens__stage" aria-hidden="true">
+      <div class="mk-lens__halo"></div>
+      <svg class="mk-lens__svg" viewBox="-300 -300 600 600" focusable="false">
+        <defs>
+          <radialGradient id="mk-lens-bezel" cx="-60" cy="-90" r="420" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#3a2a22" />
+            <stop offset="0.55" stop-color="#140c09" />
+            <stop offset="1" stop-color="#050302" />
+          </radialGradient>
+          <linearGradient id="mk-lens-metal" x1="-300" y1="-300" x2="300" y2="300" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#b9a296" />
+            <stop offset="0.35" stop-color="#3b2c25" />
+            <stop offset="0.7" stop-color="#1a110d" />
+            <stop offset="1" stop-color="#6e5a4f" />
+          </linearGradient>
+          <radialGradient id="mk-lens-glass" cx="0" cy="0" r="240" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#1c0c06" />
+            <stop offset="0.7" stop-color="#070403" />
+            <stop offset="1" stop-color="#020101" />
+          </radialGradient>
+          <radialGradient id="mk-lens-light" cx="0" cy="0" r="150" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fffaf4" />
+            <stop offset="0.1" stop-color="#ffe6cc" />
+            <stop offset="0.26" stop-color="#ffb27a" />
+            <stop offset="0.5" stop-color="#f6821f" />
+            <stop offset="0.74" stop-color="#b4441f" stop-opacity="0.75" />
+            <stop offset="1" stop-color="#5a200c" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <g class="mk-lens__body">
+          <circle r="288" fill="url(#mk-lens-bezel)" />
+          <circle r="286" fill="none" stroke="url(#mk-lens-metal)" stroke-width="3" />
+          <circle r="244" fill="url(#mk-lens-glass)" />
+          <circle r="244" fill="none" stroke="#f6c3ad" stroke-opacity="0.12" stroke-width="1.5" />
+          <circle r="196" fill="none" stroke="#f6c3ad" stroke-opacity="0.07" stroke-width="1" />
+        </g>
+        <g class="mk-lens__iris">
+          <g class="mk-lens__light">
+            <circle r="150" fill="url(#mk-lens-light)" />
+          </g>
+          <g class="mk-lens__pupil">
+            <circle r="18" fill="#ffffff" />
+          </g>
+        </g>
+        <circle class="mk-lens__ping" r="160" />
+        <path class="mk-lens__glass" d="M -170 -120 A 210 210 0 0 1 60 -205 A 230 230 0 0 0 -150 -60 Z" />
+      </svg>
+    </div>
+    <div class="mk-lens__bottom">
+      {props.body && <p class="mk-lens__body-text">{props.body}</p>}
       <p class="mk-lens__actions">
         {primary && <a class="mk-button mk-button--primary" href={primary} rel={external(primary) ? "noopener" : undefined}>{props.primaryLabel}</a>}
         {props.secondaryLabel && secondary && <a class="mk-button mk-lens__ghost" href={secondary} rel={external(secondary) ? "noopener" : undefined}>{props.secondaryLabel}</a>}
       </p>
-      <div class="mk-lens__log">
-        <p class="mk-lens__log-title">{props.logLabel}</p>
+      <div class="mk-lens__status">
+        <p class="mk-lens__status-label">{props.logLabel}</p>
         <ol>
           {props.log.map((item, i) => (
             <li data-state={item.state} data-step={i}><span class="mk-lens__dot" aria-hidden="true"></span>{item.text}</li>
           ))}
         </ol>
+        <button class="mk-lens__pause" type="button" data-lens-toggle data-pause={props.pauseLabel} data-play={props.playLabel} hidden>{props.pauseLabel}</button>
       </div>
-    </div>
-    <div class="mk-lens__stage" aria-hidden="true">
-      <div class="mk-lens__glow"></div>
-      <svg class="mk-lens__svg" viewBox="-200 -200 400 400" focusable="false">
-        <defs>
-          <radialGradient id="mk-lens-housing" cx="0" cy="0" r="200" gradientUnits="userSpaceOnUse">
-            <stop offset="0.6" stop-color="#1c100b" />
-            <stop offset="1" stop-color="#0a0605" />
-          </radialGradient>
-          <radialGradient id="mk-lens-iris" cx="0" cy="0" r="98" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#fff4ec" />
-            <stop offset="0.22" stop-color="#ffd2b3" />
-            <stop offset="0.5" stop-color="#ee8a64" />
-            <stop offset="0.82" stop-color="#b4441f" />
-            <stop offset="1" stop-color="#5a200c" />
-          </radialGradient>
-          <radialGradient id="mk-lens-pupil" cx="0" cy="0" r="30" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#ffffff" />
-            <stop offset="0.45" stop-color="#fff4ec" />
-            <stop offset="1" stop-color="#fff4ec" stop-opacity="0" />
-          </radialGradient>
-        </defs>
-        <circle r="196" fill="url(#mk-lens-housing)" />
-        <g class="mk-lens__ticks">
-          {ticks.map((t) => (
-            <line x1="0" y1={t.long ? -186 : -182} x2="0" y2="-176" transform={`rotate(${t.angle})`} />
-          ))}
-        </g>
-        <circle class="mk-lens__arc" r="168" pathLength="100" />
-        <g class="mk-lens__eye">
-          <circle r="150" fill="#2a0f06" />
-          <circle r="118" fill="none" stroke="#f6c3ad" stroke-opacity="0.55" stroke-width="1.6" />
-          <g class="mk-lens__iris">
-            <circle r="98" fill="url(#mk-lens-iris)" />
-            <g class="mk-lens__fibres">
-              {fibres.map((a) => (
-                <line x1="0" y1="-34" x2="0" y2="-94" transform={`rotate(${a})`} />
-              ))}
-            </g>
-            <circle class="mk-lens__tint" r="98" />
-            <g class="mk-lens__pupil">
-              <circle r="30" fill="url(#mk-lens-pupil)" />
-              <circle r="9" fill="#ffffff" />
-            </g>
-          </g>
-          <ellipse class="mk-lens__shine" cx="-52" cy="-62" rx="38" ry="17" transform="rotate(-32 -52 -62)" />
-        </g>
-        <circle class="mk-lens__ping" r="104" />
-      </svg>
-      <button class="mk-lens__pause" type="button" data-lens-toggle data-pause={props.pauseLabel} data-play={props.playLabel} hidden>{props.pauseLabel}</button>
     </div>
   </div>
 </section>
