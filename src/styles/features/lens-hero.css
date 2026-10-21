@@ -373,6 +373,10 @@ body:has(.mk-lens) .ch-footer {
   color: #a3968d;
   border-top: 1px solid rgb(246 195 173 / 0.12);
 }
+/* The footer's own words take the site's subtle role, dark grey in light mode: fixed here too. */
+body:has(.mk-lens) .ch-footer :is(span, p, small) {
+  color: #a3968d;
+}
 body:has(.mk-lens) .ch-footer a {
   color: #c9bdb4;
 }
