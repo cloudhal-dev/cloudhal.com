@@ -32,6 +32,7 @@ cloudhal-marketing is the theme of cloudhal.com, grown from the blog starter: a 
 - Photographs from the media library, landscape for heroes and cards (`16:9` or `4:3`), never the same image twice on a page. Alt text says what is in the picture, in the page's language.
 
 ## Pages
+- Product home (cloudhal.com): a `lens-hero` first (the brand lens beside the promise, with a three-to-five line log of how a change goes live), then one scroll story, proof, features and the closing `cta-band`. One `lens-hero` per page, never below another section.
 - Home (editorial): hero band with the publication's promise → content list of the newest articles → a `muted` band with two or three sections or categories as cards → newsletter or about call to action.
 - Landing: hero band → three to four features in a `Grid` → proof (`Stat` row or `testimonial`) → pricing (`Tabs` or `Toggle` with bound prices) → `faq` → call to action band.
 - About: one short paragraph of purpose → people or values as cards → contact call to action.

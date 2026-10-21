@@ -26,8 +26,75 @@ const linkItem = {
   },
 } as const;
 
+/** One line of the lens hero's activity log; `state` tints the lens while the line is current. */
+const lensLogItem = {
+  type: "object",
+  additionalProperties: false,
+  required: ["text", "state"],
+  properties: {
+    text: { type: "string", minLength: 1, maxLength: 80, title: "Text" },
+    state: {
+      type: "string",
+      enum: ["watching", "working", "waiting", "live"],
+      title: "Lens state",
+    },
+  },
+} as const;
+
+/** The home page's opening: the brand lens as a living scene (src/components/marketing/LensHero.astro). */
+const lensHero: BlockType = {
+  name: "lens-hero",
+  title: "Lens hero",
+  description:
+    "A page's opening scene: the headline beside the brand lens, which follows the pointer, breathes, narrows as the page scrolls and changes colour with a short log of what an agent is doing. One per page, first.",
+  icon: "Aperture",
+  category: "layout",
+  where: ["section"],
+  props: {
+    type: "object",
+    additionalProperties: false,
+    required: ["heading", "primaryLabel", "primaryHref", "log", "logLabel", "pauseLabel", "playLabel"],
+    properties: {
+      eyebrow: { type: "string", maxLength: 60, title: "Eyebrow" },
+      heading: { type: "string", minLength: 1, maxLength: 120, title: "Heading" },
+      highlight: {
+        type: "string",
+        maxLength: 60,
+        title: "Highlighted words",
+        description: "Words of the heading drawn in the brand gradient (they must occur in it).",
+      },
+      body: { type: "string", maxLength: 400, title: "Text" },
+      primaryLabel: { type: "string", minLength: 1, maxLength: 40, title: "Button" },
+      primaryHref: { type: "string", format: "url", title: "Button link" },
+      secondaryLabel: { type: "string", maxLength: 40, title: "Second button" },
+      secondaryHref: { type: "string", format: "url", title: "Second button link" },
+      logLabel: { type: "string", minLength: 1, maxLength: 60, title: "Log title" },
+      log: { type: "array", minItems: 2, maxItems: 6, title: "Activity log", items: lensLogItem },
+      pauseLabel: { type: "string", minLength: 1, maxLength: 30, title: "Pause button" },
+      playLabel: { type: "string", minLength: 1, maxLength: 30, title: "Play button" },
+    },
+  },
+  example: {
+    props: {
+      heading: "Agents build your site. Nothing ships unseen.",
+      highlight: "Nothing ships unseen.",
+      primaryLabel: "Try the playground",
+      primaryHref: "https://try.cloudhal.com",
+      logLabel: "On this site",
+      log: [
+        { text: "Agent drafts a new section", state: "working" },
+        { text: "Waiting for your approval", state: "waiting" },
+        { text: "Published, rollback ready", state: "live" },
+      ],
+      pauseLabel: "Pause motion",
+      playLabel: "Play motion",
+    },
+  },
+};
+
 /** Marketing blocks of the cloudhal-marketing theme (English only, like the site). */
 const marketingTypes: readonly BlockType[] = [
+  lensHero,
   {
     name: "feature-grid",
     title: "Feature grid",

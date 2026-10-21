@@ -31,3 +31,4 @@
 @import "./features/languages.css";
 /* cloudhal-marketing: the marketing blocks (src/components/marketing), last so they win. */
 @import "./features/marketing.css";
+@import "./features/lens-hero.css";
