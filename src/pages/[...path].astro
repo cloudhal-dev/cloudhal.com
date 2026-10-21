@@ -234,7 +234,23 @@ const footer = footerMenu
   ? markActive(footerMenu, activeItem(footerMenu, activeRoute, ancestors))
   : undefined;
 // RFC-0025: the page's header and footer, and the menus they name beyond primary and footer.
-const chrome = resolveChrome(site, route.kind === "page" ? route.page : undefined);
+const resolvedChrome = resolveChrome(site, route.kind === "page" ? route.page : undefined);
+// cloudhal-marketing: a page that opens with the lens hero (a dark scene in every colour mode) gets
+// the transparent header over it, as over a loud band (RFC-0025 overHero); lens-hero.css styles
+// data-over="lens".
+const first = route.kind === "page" ? route.page.sections?.[0] : undefined;
+const opensWithLens = first?.kind === "component" && (first as { type?: string }).type === "lens-hero";
+const chrome =
+  opensWithLens && !resolvedChrome.header.hidden
+    ? {
+        ...resolvedChrome,
+        header: {
+          ...resolvedChrome.header,
+          transparent: true,
+          over: "lens" as unknown as typeof resolvedChrome.header.over,
+        },
+      }
+    : resolvedChrome;
 const menus: Record<string, ActiveNavItem[] | undefined> = { primary: nav, footer };
 const extraMenus = await Promise.all(
   chrome.menus

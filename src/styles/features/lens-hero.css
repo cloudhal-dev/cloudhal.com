@@ -1,131 +1,90 @@
 /*
- * The lens hero (src/components/marketing/LensHero.astro): a dark scene in every colour mode, so
- * the lens glows the same way for every reader. Its own colours are fixed and checked against its
- * own background; the brand role still drives the button. The iris stays the brand's orange and
- * takes only a hint of each state; the arc, the glow and the log's dots carry the state colour. lens.ts writes the layer transforms,
- * --lens-exit (0 → 1 as the hero scrolls away) and --lens-progress (the activity log's share).
- * Two things loop (the breathing glow, the slow instrument ring); both stop when the reader
- * pauses, at motion "none" and under reduced motion.
+ * The lens hero (src/components/marketing/LensHero.astro): a dark scene in every colour mode, so the
+ * lens glows the same way for every reader. The lens sits between the headline and the actions;
+ * its light and a field of faint rings spread over the whole hero, and its edge dissolves into the
+ * dark, so it seems to come out of the background. It lights up once, then the light swells and
+ * fades on a slow breath (two CSS loops: the breath and the halo). lens.ts writes the layer
+ * transforms and --lens-exit (0 → 1 as the hero scrolls away). Its own colours are fixed and
+ * checked against its own background; the brand role still drives the primary button.
+ *
+ * A page that opens with it gets the transparent header over it ([...path].astro, data-over
+ * "lens"), and its closing call to action and footer join the same dark, so the page starts and
+ * ends in one scene.
  */
 .mk-lens {
-  --lens-bg: #0b0807;
+  --lens-bg: #070504;
   --lens-text: #f7efe9;
   --lens-muted: #c9bdb4;
   --lens-subtle: #a3968d;
-  --lens-line: rgb(246 195 173 / 0.16);
-  --lens-tint: #f6821f;
-  --lens-tint-alpha: 0;
+  --lens-line: rgb(246 195 173 / 0.14);
   --lens-exit: 0;
-  --lens-progress: 1;
+  --lens-size: min(72vw, 36vh, 420px);
   position: relative;
   isolation: isolate;
   overflow: clip;
   margin-inline: calc(50% - 50vw);
-  padding-block: clamp(2.5rem, 7vw, 6rem) clamp(3rem, 7vw, 6rem);
+  padding-block: calc(var(--ch-header-h, 4rem) + clamp(1rem, 3vh, 2.5rem)) clamp(2.5rem, 6vh, 4.5rem);
+  min-height: max(40rem, 100svh);
+  display: grid;
+  align-items: center;
   background: var(--lens-bg);
   color: var(--lens-text);
 }
-.mk-lens[data-state="working"] {
-  --lens-tint: #5dbcc5;
-  --lens-tint-alpha: 0.18;
-}
-.mk-lens[data-state="waiting"] {
-  --lens-tint: #f2c14e;
-  --lens-tint-alpha: 0.16;
-}
-.mk-lens[data-state="live"] {
-  --lens-tint: #4cc38a;
-  --lens-tint-alpha: 0.18;
-}
-
-/* The sky: warm haze and a faint instrument grid, moving with the scroll only. */
-.mk-lens__sky {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-}
-.mk-lens__cloud {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(48px);
-  transform: translateY(calc(var(--lens-exit) * var(--depth, 0px)));
-}
-.mk-lens__cloud--a {
-  --depth: 80px;
-  inset: -20% 35% 45% -15%;
-  background: radial-gradient(closest-side, rgb(180 68 31 / 0.38), transparent);
-}
-.mk-lens__cloud--b {
-  --depth: 140px;
-  inset: 10% -10% -10% 45%;
-  background: radial-gradient(closest-side, rgb(246 130 31 / 0.22), transparent);
-}
-.mk-lens__cloud--c {
-  --depth: 40px;
-  inset: 55% 20% -40% 5%;
-  background: radial-gradient(closest-side, rgb(93 188 197 / 0.1), transparent);
-}
-.mk-lens__grid {
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(90deg, var(--lens-line) 0 1px, transparent 1px 56px),
-    repeating-linear-gradient(0deg, var(--lens-line) 0 1px, transparent 1px 56px);
-  opacity: 0.35;
-  mask-image: radial-gradient(60% 70% at 70% 45%, #000, transparent);
-}
 
 .mk-lens__inner {
-  display: grid;
-  gap: clamp(1.5rem, 4vw, 3rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  max-width: 76rem;
+  max-width: 60rem;
   margin-inline: auto;
   padding-inline: 1rem;
-}
-@media (min-width: 900px) {
-  .mk-lens__inner {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-    min-height: min(78vh, 720px);
-  }
+  text-align: center;
 }
 
+.mk-lens__top,
+.mk-lens__bottom {
+  position: relative;
+  z-index: 1;
+}
 .mk-lens__eyebrow {
   margin: 0 0 1rem;
   font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #ffb98f;
 }
 .mk-lens__title {
-  margin: 0;
-  max-width: 15ch;
+  margin: 0 auto;
+  max-width: 20ch;
   font-family: var(--ch-font-display, inherit);
-  font-size: clamp(2.4rem, 5.4vw, 4.6rem);
+  font-size: clamp(2.3rem, 5.2vw, 4.4rem);
   font-weight: 700;
-  line-height: 1.02;
+  line-height: 1.03;
   letter-spacing: -0.035em;
   color: var(--lens-text);
+  text-wrap: balance;
 }
 .mk-lens__highlight {
   background: linear-gradient(95deg, #ffd8bd, #ff9a5c 45%, #f6821f);
   background-clip: text;
   color: transparent;
 }
-.mk-lens__body {
-  margin: 1.25rem 0 0;
-  max-width: 34rem;
-  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+.mk-lens__body-text {
+  margin: 0 auto;
+  max-width: 38rem;
+  font-size: clamp(1.02rem, 1.5vw, 1.18rem);
   line-height: 1.6;
   color: var(--lens-muted);
+  text-wrap: pretty;
 }
 .mk-lens__actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
-  margin: 2rem 0 0;
+  margin: 1.5rem 0 0;
 }
 .mk-lens .mk-lens__ghost {
   border-color: rgb(247 239 233 / 0.35);
@@ -135,91 +94,24 @@
   border-color: var(--lens-text);
 }
 
-/* The activity log: every line readable without JavaScript; lens.ts lights them in turn. */
-.mk-lens__log {
-  margin-top: 2.25rem;
-  max-width: 26rem;
-  padding: 1rem 1.25rem;
-  border: 1px solid var(--lens-line);
-  border-radius: var(--ch-radius-m, 0.75rem);
-  background: rgb(255 255 255 / 0.03);
-}
-.mk-lens__log-title {
-  margin: 0 0 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--lens-subtle);
-}
-.mk-lens__log ol {
-  display: grid;
-  gap: 0.4rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.mk-lens__log li {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.95rem;
-  color: var(--lens-muted);
-  transition: color 400ms ease;
-}
-.mk-lens__dot {
-  flex: none;
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: #f6821f;
-  transition: transform 400ms ease, box-shadow 400ms ease;
-}
-.mk-lens__log li[data-state="working"] .mk-lens__dot { background: #5dbcc5; }
-.mk-lens__log li[data-state="waiting"] .mk-lens__dot { background: #f2c14e; }
-.mk-lens__log li[data-state="live"] .mk-lens__dot { background: #4cc38a; }
-.mk-lens[data-live] .mk-lens__log li {
-  color: var(--lens-subtle);
-}
-.mk-lens[data-live] .mk-lens__log li.is-done {
-  color: var(--lens-muted);
-}
-.mk-lens[data-live] .mk-lens__log li.is-on {
-  color: var(--lens-text);
-}
-.mk-lens[data-live] .mk-lens__log li.is-on .mk-lens__dot {
-  transform: scale(1.35);
-  box-shadow: 0 0 0 4px rgb(255 255 255 / 0.08);
-}
-
-/* The lens. */
+/* The lens and its light. */
 .mk-lens__stage {
   position: relative;
-  justify-self: center;
-  width: min(84vw, 380px);
+  width: var(--lens-size);
   aspect-ratio: 1;
-  order: -1;
-  transform: translateY(calc(var(--lens-exit) * -15%)) scale(calc(1 + var(--lens-exit) * 0.06));
+  margin-block: clamp(0.25rem, 1.5vh, 1.25rem);
+  opacity: calc(1 - var(--lens-exit) * 0.7);
 }
-@media (min-width: 900px) {
-  .mk-lens__stage {
-    width: min(44vw, 600px);
-    order: 0;
-  }
-}
-.mk-lens__glow {
+/* The light and the ring field spread over the whole hero, centred on the lens. */
+.mk-lens__halo {
   position: absolute;
-  inset: -18%;
-  border-radius: 50%;
-  background: radial-gradient(
-    closest-side,
-    color-mix(in oklab, var(--lens-tint) 55%, transparent),
-    color-mix(in oklab, var(--lens-tint) 18%, transparent) 55%,
-    transparent
-  );
-  opacity: calc(1 - var(--lens-exit) * 0.6);
-  transition: background 800ms ease;
-  animation: mk-lens-breathe 6.5s ease-in-out infinite;
+  inset: -140%;
+  z-index: -1;
+  background:
+    radial-gradient(closest-side, rgb(246 130 31 / 0.34), rgb(180 68 31 / 0.14) 38%, transparent 70%),
+    repeating-radial-gradient(circle, transparent 0 63px, var(--lens-line) 63px 64px);
+  mask-image: radial-gradient(closest-side, #000 20%, transparent 72%);
+  pointer-events: none;
 }
 .mk-lens__svg {
   position: relative;
@@ -227,67 +119,165 @@
   width: 100%;
   height: 100%;
   overflow: visible;
+  /* Its edge dissolves into the dark: no hard rim against the scene. */
+  mask-image: radial-gradient(closest-side, #000 80%, transparent 100%);
 }
-.mk-lens__ticks line {
-  stroke: #f6c3ad;
-  stroke-opacity: 0.28;
-  stroke-width: 1.2;
+.mk-lens__light,
+.mk-lens__pupil {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
 }
-.mk-lens__ticks {
-  transform-origin: 0 0;
-  animation: mk-lens-turn 140s linear infinite;
-}
-.mk-lens__arc {
-  fill: none;
-  stroke: var(--lens-tint);
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-dasharray: calc(var(--lens-progress) * 100) 100;
-  transform: rotate(-90deg);
-  opacity: 0.85;
-  transition: stroke-dasharray 900ms cubic-bezier(0.2, 0.7, 0.2, 1), stroke 800ms ease;
-}
-.mk-lens__fibres line {
-  stroke: #5a200c;
-  stroke-opacity: 0.22;
-  stroke-width: 1;
-}
-.mk-lens__fibres {
-  transform-origin: 0 0;
-  animation: mk-lens-iris 6.5s ease-in-out infinite;
-}
-.mk-lens__tint {
-  fill: var(--lens-tint);
-  opacity: var(--lens-tint-alpha);
-  mix-blend-mode: color;
-  transition: fill 800ms ease, opacity 800ms ease;
-}
-.mk-lens__shine {
+.mk-lens__glass {
   fill: #ffffff;
-  opacity: 0.14;
+  opacity: 0.06;
 }
 .mk-lens__ping {
   fill: none;
-  stroke: #4cc38a;
+  stroke: #ffd2b3;
   stroke-width: 2;
   opacity: 0;
   transform-box: fill-box;
   transform-origin: center;
 }
+
+/* Lighting up, then breathing; the halo (outside the SVG's mask) breathes with it. */
+.mk-lens__svg {
+  animation: mk-lens-emerge 2.4s cubic-bezier(0.2, 0.6, 0.2, 1) both;
+}
+.mk-lens__light {
+  animation:
+    mk-lens-ignite 2.8s cubic-bezier(0.3, 0, 0.2, 1) both,
+    mk-lens-breathe 6s ease-in-out 2.8s infinite;
+}
+.mk-lens__pupil {
+  animation:
+    mk-lens-ignite 2.8s cubic-bezier(0.3, 0, 0.2, 1) both,
+    mk-lens-breathe 6s ease-in-out 2.8s infinite;
+}
+.mk-lens__halo {
+  animation:
+    mk-lens-fade-in 3.2s ease-out both,
+    mk-lens-halo 6s ease-in-out 3.2s infinite;
+}
 .mk-lens.is-ping .mk-lens__ping {
-  animation: mk-lens-ping 1100ms cubic-bezier(0.2, 0.7, 0.2, 1) 1;
+  animation: mk-lens-ping 1400ms cubic-bezier(0.2, 0.7, 0.2, 1) 1;
 }
 
-.mk-lens__pause {
-  position: absolute;
-  inset-block-end: 0;
-  inset-inline-end: 0;
-  padding: 0.35rem 0.75rem;
+@keyframes mk-lens-emerge {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
+@keyframes mk-lens-ignite {
+  0%,
+  25% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+@keyframes mk-lens-breathe {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(0.94);
+  }
+}
+@keyframes mk-lens-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes mk-lens-halo {
+  50% {
+    opacity: 0.6;
+  }
+}
+@keyframes mk-lens-ping {
+  from {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+/* The activity log: a list without JavaScript; one line at a time when lens.ts runs. */
+.mk-lens__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+}
+.mk-lens__status-label {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lens-subtle);
+}
+.mk-lens__status ol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mk-lens__status li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--lens-muted);
+}
+.mk-lens[data-live] .mk-lens__status ol {
+  display: grid;
+  padding: 0.4rem 0.9rem;
   border: 1px solid var(--lens-line);
   border-radius: 999px;
-  background: rgb(11 8 7 / 0.7);
-  color: var(--lens-muted);
-  font-size: 0.8rem;
+  background: rgb(255 255 255 / 0.04);
+}
+.mk-lens[data-live] .mk-lens__status li {
+  grid-area: 1 / 1;
+  justify-content: center;
+  color: var(--lens-text);
+  opacity: 0;
+  transform: translateY(0.35rem);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+.mk-lens[data-live] .mk-lens__status li.is-on {
+  opacity: 1;
+  transform: none;
+}
+.mk-lens__dot {
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #f6821f;
+}
+.mk-lens__status li[data-state="working"] .mk-lens__dot { background: #5dbcc5; }
+.mk-lens__status li[data-state="waiting"] .mk-lens__dot { background: #f2c14e; }
+.mk-lens__status li[data-state="live"] .mk-lens__dot { background: #4cc38a; }
+
+.mk-lens__pause {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--lens-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--lens-subtle);
+  font-size: 0.78rem;
   cursor: pointer;
 }
 .mk-lens__pause:hover {
@@ -296,33 +286,6 @@
 .mk-lens__pause:focus-visible {
   outline: 2px solid #ffb98f;
   outline-offset: 2px;
-}
-
-@keyframes mk-lens-breathe {
-  50% {
-    transform: scale(1.03);
-    opacity: calc(0.88 - var(--lens-exit) * 0.6);
-  }
-}
-@keyframes mk-lens-iris {
-  50% {
-    transform: rotate(4deg) scale(1.015);
-  }
-}
-@keyframes mk-lens-turn {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes mk-lens-ping {
-  from {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: scale(1.5);
-  }
 }
 
 .mk-lens[data-paused] *,
@@ -336,11 +299,83 @@
     transition: none !important;
   }
   .mk-lens__stage {
-    transform: none;
+    opacity: 1;
   }
 }
 :root[data-ch-motion="none"] .mk-lens *,
 :root[data-ch-motion="none"] .mk-lens {
   animation: none !important;
   transition: none !important;
+}
+
+/* The header over the lens hero: transparent, light words; on a scrolled sticky header, dark glass. */
+.ch-header[data-transparent][data-over="lens"]:not([data-ch-scrolled]) {
+  color: #f7efe9;
+}
+.ch-header[data-transparent][data-over="lens"]:not([data-ch-scrolled]) :is(input, .ch-menu > summary) {
+  border-color: rgb(247 239 233 / 0.3);
+  background: rgb(255 255 255 / 0.06);
+  color: #f7efe9;
+}
+.ch-header[data-transparent][data-over="lens"]:not([data-ch-scrolled]) input::placeholder {
+  color: #c9bdb4;
+}
+.ch-header[data-transparent][data-over="lens"][data-ch-scrolled] {
+  background: rgb(7 5 4 / 0.82);
+  backdrop-filter: blur(14px);
+  color: #f7efe9;
+}
+/* The lens hero starts under the transparent header and makes its own room above its content. */
+.ch-header[data-transparent][data-over="lens"] ~ main {
+  padding-bottom: 0;
+}
+.ch-header[data-transparent][data-over="lens"] ~ main > :first-child {
+  margin-block-start: 0;
+  padding-block-start: 0;
+}
+
+/* The page ends in the same dark: a closing cta-band right before the footer becomes a full-width
+   scene with the lens's light rising from below, and the footer continues it. */
+body:has(.mk-lens) main > .ch-block[data-block-type="cta-band"]:last-child {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  margin-inline: calc(50% - 50vw);
+  padding: clamp(4rem, 12vh, 7rem) 1rem clamp(3rem, 8vh, 5rem);
+  background: #070504;
+}
+body:has(.mk-lens) main > .ch-block[data-block-type="cta-band"]:last-child::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% -60% -20%;
+  height: 120%;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgb(246 130 31 / 0.3), rgb(180 68 31 / 0.1) 45%, transparent 75%);
+}
+body:has(.mk-lens) main > .ch-block[data-block-type="cta-band"]:last-child .mk-cta {
+  max-width: 44rem;
+  margin-inline: auto;
+  background: transparent;
+  color: #f7efe9;
+  box-shadow: none;
+  border: 0;
+}
+body:has(.mk-lens) main > .ch-block[data-block-type="cta-band"]:last-child .mk-cta h2 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  letter-spacing: -0.03em;
+  color: #f7efe9;
+}
+body:has(.mk-lens) main > .ch-block[data-block-type="cta-band"]:last-child .mk-cta p {
+  color: #c9bdb4;
+}
+body:has(.mk-lens) .ch-footer {
+  background: #070504;
+  color: #a3968d;
+  border-top: 1px solid rgb(246 195 173 / 0.12);
+}
+body:has(.mk-lens) .ch-footer a {
+  color: #c9bdb4;
+}
+body:has(.mk-lens) .ch-footer a:hover {
+  color: #f7efe9;
 }
