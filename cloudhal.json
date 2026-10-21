@@ -9,6 +9,9 @@
   },
   "domains": {
     "site": "cloudhal.com",
-    "studio": "studio.cloudhal.com"
+    "studio": "studio.cloudhal.com",
+    "redirects": [
+      "www.cloudhal.com"
+    ]
   }
 }

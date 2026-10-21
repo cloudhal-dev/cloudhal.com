@@ -31,11 +31,17 @@
     "CLOUDHAL_SITE_ID": "site_8DTHH9QRG8CAMYKHENBW",
     "CLOUDHAL_ANALYTICS": "on",
     "CLOUDHAL_ANALYTICS_DEFAULTS": "{\"enabled\":true,\"uniqueVisitors\":false,\"vitalsOneIn\":5}",
-    "CLOUDHAL_SITE_HOSTS": "cloudhal.com"
+    "CLOUDHAL_SITE_HOSTS": "cloudhal.com",
+    "CLOUDHAL_REDIRECT_HOSTS": "www.cloudhal.com",
+    "CLOUDHAL_REDIRECT_TO": "cloudhal.com"
   },
   "routes": [
     {
       "pattern": "cloudhal.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.cloudhal.com",
       "custom_domain": true
     }
   ],
