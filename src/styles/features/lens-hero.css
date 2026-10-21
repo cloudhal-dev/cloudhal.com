@@ -248,17 +248,25 @@
   border-radius: 999px;
   background: rgb(255 255 255 / 0.04);
 }
+.mk-lens[data-live] .mk-lens__status ol {
+  max-width: 100%;
+}
+/* One line at a time: the old line fades out first, then the new one comes in, so two lines never
+   show at once; a line never wraps under the next. */
 .mk-lens[data-live] .mk-lens__status li {
   grid-area: 1 / 1;
   justify-content: center;
+  min-width: 0;
+  white-space: nowrap;
   color: var(--lens-text);
   opacity: 0;
   transform: translateY(0.35rem);
-  transition: opacity 500ms ease, transform 500ms ease;
+  transition: opacity 220ms ease, transform 220ms ease;
 }
 .mk-lens[data-live] .mk-lens__status li.is-on {
   opacity: 1;
   transform: none;
+  transition: opacity 420ms ease 240ms, transform 420ms ease 240ms;
 }
 .mk-lens__dot {
   flex: none;
