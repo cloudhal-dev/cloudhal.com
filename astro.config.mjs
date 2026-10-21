@@ -36,5 +36,13 @@ export default defineConfig({
       ...(project.comments ? { comments: project.comments } : {}),
     }),
   ],
-  vite: { plugins: [tailwindcss()] },
+  vite: {
+    plugins: [tailwindcss()],
+    build: {
+      // The site Worker sends `Content-Security-Policy: script-src 'self'`, which blocks inline
+      // scripts. Astro inlines a component's <script> under 4 KB (the lens hero's is ~3 KB), so
+      // scripts always ship as files; other assets keep Astro's default.
+      assetsInlineLimit: (file) => (file.endsWith(".js") ? false : undefined),
+    },
+  },
 });
