@@ -13,6 +13,7 @@ import LatestPosts from "./components/LatestPosts.astro";
 import CtaBand from "./components/marketing/CtaBand.astro";
 import FeatureGrid from "./components/marketing/FeatureGrid.astro";
 import Hero from "./components/marketing/Hero.astro";
+import LensHero from "./components/marketing/LensHero.astro";
 import LinkCards from "./components/marketing/LinkCards.astro";
 import PricingTable from "./components/marketing/PricingTable.astro";
 import Steps from "./components/marketing/Steps.astro";
@@ -35,6 +36,7 @@ export const blocks: BlockComponents = {
   "pricing-table": PricingTable,
   "link-cards": LinkCards,
   "cta-band": CtaBand,
+  "lens-hero": LensHero,
 };
 
 /** Entries per category/tag archive page (`/category/<slug>/page/<n>`). */
