@@ -170,14 +170,14 @@ importers:
         specifier: 14.3.4
         version: 14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1)
       '@cloudhal/astro-renderer':
-        specifier: 0.3.10
-        version: 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+        specifier: 0.3.12
+        version: 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       '@cloudhal/cli':
-        specifier: 0.3.10
-        version: 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(hono@4.13.13)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
+        specifier: 0.3.12
+        version: 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(hono@4.13.13)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
       '@cloudhal/core-ts':
-        specifier: 0.3.10
-        version: 0.3.10(better-sqlite3@13.0.3)
+        specifier: 0.3.12
+        version: 0.3.12(better-sqlite3@13.0.3)
       '@tailwindcss/vite':
         specifier: ^4.3.3
         version: 4.3.3(vite@8.3.4(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
@@ -192,8 +192,8 @@ importers:
         version: 4.3.3
     devDependencies:
       '@cloudhal/cloudflare':
-        specifier: 0.3.10
-        version: 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)
+        specifier: 0.3.12
+        version: 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)
       wrangler:
         specifier: ^4.151.0
         version: 4.151.1
@@ -509,16 +509,16 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudhal/agent-runtime@0.3.10':
-    resolution: {integrity: sha512-Awk8G6DgG4X0KDpZTeuvECg+8M++EyudCS7qOPhNsSIJoN9E5usfAkZ/EGpmqvFDEr4qh+R8D5Yq9TVQY5HRTA==}
+  '@cloudhal/agent-runtime@0.3.12':
+    resolution: {integrity: sha512-eCdnXPcMwqvoIkG9x2piP8NcPWWZKwcNRtHzTfM+PugIEDxmrN6iP3wsBkdpZEiIOLbONXjuX5XX0QvQ2mMg4A==}
     engines: {node: '>=24'}
 
-  '@cloudhal/analytics@0.3.10':
-    resolution: {integrity: sha512-qG5+J1zVUkFQlwZUcgYE8YwmL94/YGMK6PcfA2RG+Az5FZpILzpnb8gWWggOSpwGPh/xdOr8TK5c1NgxMZYv3A==}
+  '@cloudhal/analytics@0.3.12':
+    resolution: {integrity: sha512-NiUIMcZ+HCvBoTmojzksOkg60CVZa4sCP42XDyogwBOHX+R1E8ozxzSsZz9GrmDsU/wwD918ysqw9Edc6lRdfQ==}
     engines: {node: '>=24'}
 
-  '@cloudhal/api@0.3.10':
-    resolution: {integrity: sha512-z7jKF0szbDba5SuQvSSiGEPItAysv4H9u9lAyJtJyIpAn7lsGYQ5yB3QLNrG56PuWkJtz8ujhkZSHVDmL7VT2w==}
+  '@cloudhal/api@0.3.12':
+    resolution: {integrity: sha512-yl4lO+u5oTSNzXN995pCYW8VH2GJd3bgvaLMzms8/orPe0V1ujpE35OAmkeJkZqyrZWhvkZ2qOpoEmqYnKVnOw==}
     engines: {node: '>=24'}
     peerDependencies:
       '@hono/node-server': ^2.0.0
@@ -529,8 +529,8 @@ packages:
       better-sqlite3:
         optional: true
 
-  '@cloudhal/astro-renderer@0.3.10':
-    resolution: {integrity: sha512-xr0d3eCNfqvq6WksTrVzP+X27dIr//zlXhg/TyzpxvlRxWWvKyCShV8kg02Qy/sia09Auz7Q4kUI7L1WAaCPvA==}
+  '@cloudhal/astro-renderer@0.3.12':
+    resolution: {integrity: sha512-iGbyGRE9rQ4A247sDQaBWnjyLhCPDvO62WF3zv9Rbm8c9Y7SAFCT2Sdi3aCBTJOc2rvMTkMEqZJ5iRE19Wrr7Q==}
     engines: {node: '>=24'}
     peerDependencies:
       '@astrojs/cloudflare': ^14.3.0
@@ -539,27 +539,27 @@ packages:
       '@astrojs/cloudflare':
         optional: true
 
-  '@cloudhal/cli@0.3.10':
-    resolution: {integrity: sha512-M1Dcs8/Wxe+TCl+UCD4+GGqtlAgDNdsj/3fG/sg+mXrhUTOrHSXWLEe7IrCkwOVVH5hxu9gKc5+rzAf5FGHVGg==}
+  '@cloudhal/cli@0.3.12':
+    resolution: {integrity: sha512-ZrV+s1VxPT1Kt8mo+/S7lUqHGohiczjVVkDN5ZLvuAD0XBkD/C02P8eYkZ8Qg/QqGyW18X2OQf7TzvRQs6Kuuw==}
     engines: {node: '>=24'}
     hasBin: true
     peerDependencies:
       astro: ^7.3.0
 
-  '@cloudhal/cloudflare@0.3.10':
-    resolution: {integrity: sha512-If7FpdzjwiWXpxUNczEDzY4iqh0FVZkVqyMBStBhSGuVqmR5Pqay2+MFMcNAk15frywBQUb1PmI1FK1FA8dK7A==}
+  '@cloudhal/cloudflare@0.3.12':
+    resolution: {integrity: sha512-ciVFV5jWgZFMymr7b6m8GKPaEOPYWSDZ5NzoS9tEZCKsceMNDbf1NY2jMdAMG6/QpU1K8/aAemlHgxsbABm/tA==}
     engines: {node: '>=24'}
 
-  '@cloudhal/comments@0.3.10':
-    resolution: {integrity: sha512-JWii2I9pzA4QibcHxDDketv/s3SFAYIsvovElOEZ27iD4ICx38QUxeuObz6WeSLAsDlZy9jt5VrVY3aC5GB6nA==}
+  '@cloudhal/comments@0.3.12':
+    resolution: {integrity: sha512-QPhYuWdNVek1x+IHdHqgo3TsSz5sxwALkQ2TkOUOI/ctNxXzEyflqcCCkRHrzuGAmB2065dydSXBdOpXBX5pnA==}
     engines: {node: '>=24'}
 
-  '@cloudhal/core-contracts@0.3.10':
-    resolution: {integrity: sha512-WYtv7J+Gusc+I6mjkfET2Nx3YJAo3U/c4yn9Y0M8PGi+/uaDFCwnTVv2sfksn/QLwrUBwTAnWFp3fCR261IWgw==}
+  '@cloudhal/core-contracts@0.3.12':
+    resolution: {integrity: sha512-dGXWGoNdRbAOFFFiDB3Ayo80ED0s2OtjYIGq8Mlrsw7EA29CPE2TZJnVJ2U3KPHKIy+7tXBJKlqnIxmXRlUbDQ==}
     engines: {node: '>=24'}
 
-  '@cloudhal/core-ts@0.3.10':
-    resolution: {integrity: sha512-BPHfbu1bWvuJPLYNF24M6U2gtMBOTIALNrBgM3LJUE67mrQDZ/iw8dj9+ByBFE+g1pILRf9n6o9JR6e4wpU5Xw==}
+  '@cloudhal/core-ts@0.3.12':
+    resolution: {integrity: sha512-nhP28CnHv39dhi/8UEcL9OG47fRnK3yO3OUWikGnRv1Ryf2ROqwlZKgf5EQdcrLHrsXr1l83HQ+x4nMtN1O8Dw==}
     engines: {node: '>=24'}
     peerDependencies:
       better-sqlite3: ^13.0.0
@@ -567,16 +567,16 @@ packages:
       better-sqlite3:
         optional: true
 
-  '@cloudhal/mcp-server@0.3.10':
-    resolution: {integrity: sha512-904RRHoqirl34vfQSPJuqIIeJu+nZvYY7mgAEp+cyDizEiySMwyrPqwxv6mUUoMTdqYKugruEhbICLvcl9v+bg==}
+  '@cloudhal/mcp-server@0.3.12':
+    resolution: {integrity: sha512-iMZPo/SrUnZ7nDm30oTCXgrfKasy5FUfeoHz/8ZjQ3ohm18b3RBMxh95uHGRx48g+IPO5NHNvHLnclCU+mtblQ==}
     engines: {node: '>=24'}
 
-  '@cloudhal/schedules@0.3.10':
-    resolution: {integrity: sha512-pij5B0VA18LplgMnmHZspzZH7ckXPFCdRPdqjXEi6O5AMxOJoPYVSIrpcoM8TJC83A/OC+1mAttzMaT7BW7QnA==}
+  '@cloudhal/schedules@0.3.12':
+    resolution: {integrity: sha512-GhkFkzMo/Mu8ellLjX0kMjA6sWtos9p7vktDpX8nN5YEyQCLpfkAbD5brkTbme8uawK2anp7bnsxhBs3jGToBQ==}
     engines: {node: '>=24'}
 
-  '@cloudhal/storage@0.3.10':
-    resolution: {integrity: sha512-/iLsNLsRZgOG9rT02YwugovHQXOjUHeB6em1yapQI4BhXsxHe/wlcEM9xpM3WUj4VAsNNa+NXRRHa4ULI9YNHw==}
+  '@cloudhal/storage@0.3.12':
+    resolution: {integrity: sha512-d6Y03QZqkpW+QlfOPUdAgnia73EMzmr3VH/qLDqggO/ahZoYK07hT14OfnNoKuXR1dCZJ81RbqXjAXR5+CIH1g==}
     engines: {node: '>=24'}
     peerDependencies:
       better-sqlite3: ^13.0.0
@@ -2528,35 +2528,35 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20261012.1':
     optional: true
 
-  '@cloudhal/agent-runtime@0.3.10(better-sqlite3@13.0.3)':
+  '@cloudhal/agent-runtime@0.3.12(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.3.10
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.3.12
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
     transitivePeerDependencies:
       - better-sqlite3
 
-  '@cloudhal/analytics@0.3.10(better-sqlite3@13.0.3)':
+  '@cloudhal/analytics@0.3.12(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.3.10
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.3.12
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
       web-vitals: 6.2.3
     transitivePeerDependencies:
       - better-sqlite3
 
-  '@cloudhal/api@0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)':
+  '@cloudhal/api@0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)':
     dependencies:
       '@better-auth/api-key': 1.7.7(@better-auth/core@1.7.7(@better-auth/utils@0.4.2)(@better-fetch/fetch@1.3.2)(better-call@1.4.0(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.4.2)(better-auth@1.7.7)(better-call@1.4.0(zod@4.6.7))
       '@better-auth/core': 1.7.7(@better-auth/utils@0.4.2)(@better-fetch/fetch@1.3.2)(better-call@1.4.0(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
       '@better-auth/utils': 0.4.2
-      '@cloudhal/agent-runtime': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/analytics': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/astro-renderer': 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/comments': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/core-contracts': 0.3.10
-      '@cloudhal/core-ts': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/mcp-server': 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/schedules': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/agent-runtime': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/astro-renderer': 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/comments': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.3.12
+      '@cloudhal/core-ts': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/mcp-server': 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/schedules': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
       better-auth: 1.7.7
       better-call: 1.4.0(zod@4.6.7)
       hono: 4.13.13
@@ -2603,13 +2603,13 @@ snapshots:
       - yaml
       - zod
 
-  '@cloudhal/astro-renderer@0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)':
+  '@cloudhal/astro-renderer@0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)':
     dependencies:
-      '@cloudhal/analytics': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/comments': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/core-contracts': 0.3.10
-      '@cloudhal/core-ts': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/comments': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.3.12
+      '@cloudhal/core-ts': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
       astro: 7.3.6(jiti@2.7.0)(yaml@2.9.1)
       marked: 18.1.1
       parse5: 8.0.1
@@ -2631,18 +2631,18 @@ snapshots:
       - tsx
       - yaml
 
-  '@cloudhal/cli@0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(hono@4.13.13)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)':
+  '@cloudhal/cli@0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(hono@4.13.13)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)':
     dependencies:
-      '@cloudhal/agent-runtime': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/analytics': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/api': 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
-      '@cloudhal/cloudflare': 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)
-      '@cloudhal/comments': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/core-contracts': 0.3.10
-      '@cloudhal/core-ts': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/mcp-server': 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/schedules': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/agent-runtime': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/api': 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
+      '@cloudhal/cloudflare': 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)
+      '@cloudhal/comments': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.3.12
+      '@cloudhal/core-ts': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/mcp-server': 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/schedules': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
       '@hono/node-server': 2.1.5(hono@4.13.13)
       astro: 7.3.6(jiti@2.7.0)(yaml@2.9.1)
       better-sqlite3: 13.0.3
@@ -2686,16 +2686,16 @@ snapshots:
       - yaml
       - zod
 
-  '@cloudhal/cloudflare@0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)':
+  '@cloudhal/cloudflare@0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)':
     dependencies:
-      '@cloudhal/agent-runtime': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/analytics': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/api': 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
-      '@cloudhal/comments': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/core-ts': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/mcp-server': 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/schedules': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/agent-runtime': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/api': 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.2)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
+      '@cloudhal/comments': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/core-ts': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/mcp-server': 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/schedules': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
       zod: 4.6.7
     transitivePeerDependencies:
       - '@astrojs/cloudflare'
@@ -2738,39 +2738,39 @@ snapshots:
       - vue
       - yaml
 
-  '@cloudhal/comments@0.3.10(better-sqlite3@13.0.3)':
+  '@cloudhal/comments@0.3.12(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.3.10
-      '@cloudhal/core-ts': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.3.12
+      '@cloudhal/core-ts': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
     transitivePeerDependencies:
       - better-sqlite3
 
-  '@cloudhal/core-contracts@0.3.10':
+  '@cloudhal/core-contracts@0.3.12':
     dependencies:
       ajv: 8.20.0
       ajv-formats: 3.0.1
 
-  '@cloudhal/core-ts@0.3.10(better-sqlite3@13.0.3)':
+  '@cloudhal/core-ts@0.3.12(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.3.10
-      '@cloudhal/schedules': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.3.12
+      '@cloudhal/schedules': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
       marked: 18.1.1
       temporal-polyfill: 1.0.5
     optionalDependencies:
       better-sqlite3: 13.0.3
 
-  '@cloudhal/mcp-server@0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)':
+  '@cloudhal/mcp-server@0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)':
     dependencies:
-      '@cloudhal/agent-runtime': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/analytics': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/astro-renderer': 0.3.10(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/comments': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/core-contracts': 0.3.10
-      '@cloudhal/core-ts': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/schedules': 0.3.10(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/agent-runtime': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/astro-renderer': 0.3.12(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/comments': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.3.12
+      '@cloudhal/core-ts': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/schedules': 0.3.12(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
       '@modelcontextprotocol/server': 2.3.1
     transitivePeerDependencies:
       - '@astrojs/cloudflare'
@@ -2789,17 +2789,17 @@ snapshots:
       - tsx
       - yaml
 
-  '@cloudhal/schedules@0.3.10(better-sqlite3@13.0.3)':
+  '@cloudhal/schedules@0.3.12(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.3.10
-      '@cloudhal/storage': 0.3.10(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.3.12
+      '@cloudhal/storage': 0.3.12(better-sqlite3@13.0.3)
       temporal-polyfill: 1.0.5
     transitivePeerDependencies:
       - better-sqlite3
 
-  '@cloudhal/storage@0.3.10(better-sqlite3@13.0.3)':
+  '@cloudhal/storage@0.3.12(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.3.10
+      '@cloudhal/core-contracts': 0.3.12
     optionalDependencies:
       better-sqlite3: 13.0.3
 
