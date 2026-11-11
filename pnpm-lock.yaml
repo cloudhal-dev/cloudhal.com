@@ -170,14 +170,14 @@ importers:
         specifier: 14.3.4
         version: 14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1)
       '@cloudhal/astro-renderer':
-        specifier: 0.6.5
-        version: 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+        specifier: 0.7.3
+        version: 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       '@cloudhal/cli':
-        specifier: 0.6.5
-        version: 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(hono@4.13.13)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
+        specifier: 0.7.3
+        version: 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(hono@4.13.13)(jiti@2.7.0)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
       '@cloudhal/core-ts':
-        specifier: 0.6.5
-        version: 0.6.5(better-sqlite3@13.0.3)
+        specifier: 0.7.3
+        version: 0.7.3(better-sqlite3@13.0.3)
       '@tailwindcss/vite':
         specifier: ^4.3.3
         version: 4.3.3(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
@@ -192,8 +192,8 @@ importers:
         version: 4.3.3
     devDependencies:
       '@cloudhal/cloudflare':
-        specifier: 0.6.5
-        version: 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)
+        specifier: 0.7.3
+        version: 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)
       wrangler:
         specifier: ^4.151.0
         version: 4.151.1
@@ -311,16 +311,24 @@ packages:
     resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
 
-  '@better-auth/api-key@1.7.17':
-    resolution: {integrity: sha512-qsU+Z7oNu0ZOx5joJKuVNEL9JvrMu/+Hkivda/CPZ9Efj65DTWqWTdgNXABDJGiomL2VocjFF3VA4lOkBXY1+A==}
+  '@better-auth/api-key@1.7.18':
+    resolution: {integrity: sha512-LEB0GLTM+WJlRx046P7Hmt5CpA3E6Cqc/LDEYhUDa86Mpi43kAZrxfD3i/d/4z9rP8dtmmj44JWQyaylO/ArDw==}
     peerDependencies:
-      '@better-auth/core': ^1.7.17
+      '@better-auth/core': ^1.7.18
       '@better-auth/utils': ^0.4.2 || ^0.5.0
-      better-auth: ^1.7.17
+      better-auth: ^1.7.18
       better-call: 1.4.5
 
-  '@better-auth/core@1.7.17':
-    resolution: {integrity: sha512-GB3OtOjNfeOKxKOQByXLdj3CNNDbZ65HdbfHSZhoLI6VzlURlb2VXMFnf05NE8fhDoytXY+zlbqTcwaWKTS7/g==}
+  '@better-auth/cimd@1.7.18':
+    resolution: {integrity: sha512-Oln0ZIQwkzqCGjMJpP0RSBjYvrS4APozUpPfUVIuIdhTAepAprp4VWu1WlLCs0gFHhsJlq3QjlFfv80W/lJ/IA==}
+    peerDependencies:
+      '@better-auth/core': ^1.7.18
+      '@better-auth/oauth-provider': ^1.7.18
+      better-auth: ^1.7.18
+      better-call: 1.4.5
+
+  '@better-auth/core@1.7.18':
+    resolution: {integrity: sha512-GPue1yR24fd+RkCiOpVtdBwtCqkgGHRMGxUL6A11LzUv0JsHA2hnIFEdoxorr9TWO2kJLvYOuUu0vjV9Wxd4AA==}
     peerDependencies:
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       '@better-fetch/fetch': 1.3.3
@@ -333,46 +341,62 @@ packages:
       '@opentelemetry/api':
         optional: true
 
-  '@better-auth/drizzle-adapter@1.7.17':
-    resolution: {integrity: sha512-A63iAB9tZLw/HU2bwf+FNwd3Hm5dzoNULOJckzPVMnddf0hO/gnjM94D/yVuu7w9cg8QTVAV7Zu3ehz1lKnX9A==}
+  '@better-auth/drizzle-adapter@1.7.18':
+    resolution: {integrity: sha512-l+J+WG11dQ9kzcAyAxgo5qh7bqGzsvN4uApR45limXe9gR02kijQi42xHJlWN8+TL6mmA69EC7W4MWbaHvmHGg==}
     peerDependencies:
-      '@better-auth/core': ^1.7.17
+      '@better-auth/core': ^1.7.18
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       drizzle-orm: ^0.45.2 || >=1.0.0-rc.1 <2.0.0
     peerDependenciesMeta:
       drizzle-orm:
         optional: true
 
-  '@better-auth/kysely-adapter@1.7.17':
-    resolution: {integrity: sha512-YPBdzMtwky0p3Jwbp6FmO7CnREOkxXJklwJsm2Hl6MN4qF+AY7T61Wq3IZ784BP7fmW7AaSPjkTe4+OGrFz1mQ==}
+  '@better-auth/kysely-adapter@1.7.18':
+    resolution: {integrity: sha512-hFpFu1DRsis6pNB1riUzwXsbKi/3RilhUeGw+bY3iHduf7zcT4UmBG7tyltWgmE16MF8X7sgMbS9bL7G4pC6dQ==}
     peerDependencies:
-      '@better-auth/core': ^1.7.17
+      '@better-auth/core': ^1.7.18
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       kysely: ^0.28.17 || ^0.29.0
     peerDependenciesMeta:
       kysely:
         optional: true
 
-  '@better-auth/memory-adapter@1.7.17':
-    resolution: {integrity: sha512-nEFRisxbSy1i3nmP0mqR5kwtNpYWSOqcdT+0axcPHeGK7DIeN6lpc5bEoPIkxPcSTyDzv0K67jlt1A60wGUY4g==}
+  '@better-auth/mcp@1.7.18':
+    resolution: {integrity: sha512-72NkYPS72oOk78BPZEe7oTHndyayNNhq5neOBiEvolq3tZbwgL88XzQXoLh6V6ITzsc4Q7KiSMbkWO4hjbqPgg==}
     peerDependencies:
-      '@better-auth/core': ^1.7.17
+      '@better-auth/core': ^1.7.18
+      better-auth: ^1.7.18
+      better-call: 1.4.5
+
+  '@better-auth/memory-adapter@1.7.18':
+    resolution: {integrity: sha512-nEjQsThcsPOInoAq24vqjm/Rk6NrAkvl/K3Cpokp1mw0KM4IFNeT+EZV/IYX1MGK/QXNPA1q6N7f8pIxQHq1og==}
+    peerDependencies:
+      '@better-auth/core': ^1.7.18
       '@better-auth/utils': ^0.4.2 || ^0.5.0
 
-  '@better-auth/mongo-adapter@1.7.17':
-    resolution: {integrity: sha512-Pu6rutW9h3K+pUiiDCtedjdPgD/62cYScKCM04az8g7SGVDJVAWF73ly3cN2EflYnLs96yp68e4zAnr0XJDgsQ==}
+  '@better-auth/mongo-adapter@1.7.18':
+    resolution: {integrity: sha512-0Fdw+0KkPhaxN3B4+PMlQWNoxSYiyBmU+puF+oujV3l5/41TOJyogzE+BHeH2pZ6WymAd3d4mfpl3iCodS/XlQ==}
     peerDependencies:
-      '@better-auth/core': ^1.7.17
+      '@better-auth/core': ^1.7.18
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       mongodb: ^6.0.0 || ^7.0.0
     peerDependenciesMeta:
       mongodb:
         optional: true
 
-  '@better-auth/prisma-adapter@1.7.17':
-    resolution: {integrity: sha512-gxowKIc8X8fUDPikuN+kWtfcGjXcy6CY/dpxJecSBDCn61g+T0AJdQpUzu7KhkjfYyw/ADxk7xtAc00tR7BoFA==}
+  '@better-auth/oauth-provider@1.7.18':
+    resolution: {integrity: sha512-NIO57w5+Z0HRsPEXDkt5PxZ1FcVltY815tmoRzqgfwJ9HFAI1Bm3vfMj2MFFVJF6FIqtutJHEghwgaokG2dIRA==}
     peerDependencies:
-      '@better-auth/core': ^1.7.17
+      '@better-auth/core': ^1.7.18
+      '@better-auth/utils': ^0.4.2 || ^0.5.0
+      '@better-fetch/fetch': 1.3.3
+      better-auth: ^1.7.18
+      better-call: 1.4.5
+
+  '@better-auth/prisma-adapter@1.7.18':
+    resolution: {integrity: sha512-NbGtY+WU5vV5M1wYTypNQRSJS45QafK5JkFkcWggshoSIAypI8/5sj5ilrO4T+vqfubNISi2Z6LPNIscVBg3Pg==}
+    peerDependencies:
+      '@better-auth/core': ^1.7.18
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       '@prisma/client': ^5.0.0 || ^6.0.0 || ^7.0.0
       prisma: ^5.0.0 || ^6.0.0 || ^7.0.0
@@ -382,21 +406,15 @@ packages:
       prisma:
         optional: true
 
-  '@better-auth/telemetry@1.7.17':
-    resolution: {integrity: sha512-VhBBYBBtSK6tZlEdc5MwV6L/8HHjuGIns9QmlhqxiCk2xA4ILAVXo7O9S1iltxqe+H8gUKh5jbpY9hriW88MeQ==}
+  '@better-auth/telemetry@1.7.18':
+    resolution: {integrity: sha512-mhZxFhzG28dQLdSBVXZp0v5P3gTCylu5q5U/XmV8UVucN449+9JLzktO41Z89pAV/mt4Q1mooNC7w0Vax9B4vA==}
     peerDependencies:
-      '@better-auth/core': ^1.7.17
+      '@better-auth/core': ^1.7.18
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       '@better-fetch/fetch': 1.3.3
 
-  '@better-auth/utils@0.5.0':
-    resolution: {integrity: sha512-BL8W4EfIZFwlu0r54m3v1ztjDhu6dDe/amLTm0xybmbZaNgYUqhD3SjpAsnq0q8YD6/ki4iwIgxJNLP/N3TxiA==}
-
   '@better-auth/utils@0.5.1':
     resolution: {integrity: sha512-WETqw5vQ52uQ/xwWR4E8rTgT6fDEr/wnS+otDNkBCa/69281FCF32OKDdQUcahMCnjsvqXBNiEvAQHFB0EVRRg==}
-
-  '@better-fetch/fetch@1.3.2':
-    resolution: {integrity: sha512-Gs7n99b5tqUC6cQAPbV0uED3IraHB6xQbHLQ/C3l7ZFafHScOx9pQ+DYmP5blbLFShVWLqxNUlI9wi4xU/X+ow==}
 
   '@better-fetch/fetch@1.3.3':
     resolution: {integrity: sha512-U6SlDt/GUWtK2JAxS/NhdoYTEim+EL1G5byz2TUj83KjLZBUpYzb5SmX0aXaCnbGkAjFKnV/o/0+cyXMbEcqqg==}
@@ -512,12 +530,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudhal/agent-runtime@0.6.5':
-    resolution: {integrity: sha512-aRAfp2wly+rloJjFxUP/R2FGrt25pNZlg0rjnoSC9TfbKUtNjPCmMogFV3qWem1+HQCXHb/i0LDmAau0VTvjIA==}
+  '@cloudhal/agent-runtime@0.7.3':
+    resolution: {integrity: sha512-OVQAiGSMAws9rRbilt8zktm+yKfNz9VXmurX4k7YkqerXgy+85IGn0Wi60cZLELS+zxRXjzA2o3dAQk5aDJXCQ==}
     engines: {node: '>=24'}
 
-  '@cloudhal/analytics@0.6.5':
-    resolution: {integrity: sha512-T7NYI2Z/mG5P7y4xxLEVA8fFFbz6j3s4OXS5JU+XhsaL72vtA18YTB/yuYWhQllfq14oARTgAZNxUnWlJNR2Pg==}
+  '@cloudhal/analytics@0.7.3':
+    resolution: {integrity: sha512-TWjmb2l1+Dl1/+T6AhQHoojMXIPvs6N9fXa/MvlggLp/xh6F6p50kQrRt3bbsgrDZNWH41NMtQ6gzHgUXF6t9w==}
     engines: {node: '>=24'}
     peerDependencies:
       vitest: '>=3.0.0'
@@ -525,8 +543,8 @@ packages:
       vitest:
         optional: true
 
-  '@cloudhal/api@0.6.5':
-    resolution: {integrity: sha512-1T2kEHqIXqdQk6zYRrvVnlfCOCE54JURsIU4+YR+qJmLxYvbYrJpl1KKHMu7eLDLdmr85oWhlw9cij2TwC1Jmw==}
+  '@cloudhal/api@0.7.3':
+    resolution: {integrity: sha512-GXRdEyAJPcEajxo5Ur3/ECdmfN5/R0AXcpRbB+kTcjKtnC+ZzxsmVaequdjG6XX4QywCj1/YLUwBCeW/kyva6g==}
     engines: {node: '>=24'}
     peerDependencies:
       '@hono/node-server': ^2.0.0
@@ -537,8 +555,8 @@ packages:
       better-sqlite3:
         optional: true
 
-  '@cloudhal/astro-renderer@0.6.5':
-    resolution: {integrity: sha512-T4mPaebo4M+wIA3BtbP9919GtFwHHYLphvH+jjE0E7GFaSGaTE7eIaNMD4Atk3wORRgKTzoYWPNxuo5/2lTvYw==}
+  '@cloudhal/astro-renderer@0.7.3':
+    resolution: {integrity: sha512-jhRh+MPDVudlqmq7RSwSm0dvbp31PR9OIpVdXSLrSSULZUlCoqgHEPB3mPk7eyH8cohitqya4jEhsalNtj0vsA==}
     engines: {node: '>=24'}
     peerDependencies:
       '@astrojs/cloudflare': ^14.3.0
@@ -547,19 +565,19 @@ packages:
       '@astrojs/cloudflare':
         optional: true
 
-  '@cloudhal/cli@0.6.5':
-    resolution: {integrity: sha512-lmQnnszSXcuGTenefTjEnYwCh8HgUeV3LFgVW8KZdbjJpF1lgRh0U0UmPwYbSQFMifWNn5HSxEByWlf3AZ8G7g==}
+  '@cloudhal/cli@0.7.3':
+    resolution: {integrity: sha512-g2eosOS78EXOAH+vN9zmBkhzd2lOYxA/IGg+CoI2NVKvA8GxtqNcq4l0wH2OReQuVzKjkp3GyqTndOvFaIb+Cw==}
     engines: {node: '>=24'}
     hasBin: true
     peerDependencies:
       astro: ^7.4.0
 
-  '@cloudhal/cloudflare@0.6.5':
-    resolution: {integrity: sha512-wUJ+1N/vfG9Wmaqn+3Mnyilb4WKxPXcPNbSqeclDilyxz9V1qc0tGzDivUvzJcG9ZpulbiLJ3B22mnGgQPIMww==}
+  '@cloudhal/cloudflare@0.7.3':
+    resolution: {integrity: sha512-+VXcTJahxHOeE64l+h4B/mXNzjEK/38deOIGV7SVwooPWssENZ410oWHM2vpk/lw1j7Dc8/vFpfBUkvpab4UZw==}
     engines: {node: '>=24'}
 
-  '@cloudhal/comments@0.6.5':
-    resolution: {integrity: sha512-UW1nC7zLDbtivHHSUOCkLixTGoZOWmvKzRL6XCohWCrSgOeO8ELSbT8A9lcgm937wUAektS1LR34yWKckIdTJw==}
+  '@cloudhal/comments@0.7.3':
+    resolution: {integrity: sha512-lYJAd7jLMdFVvlherp4CHyEynr0Vyl24x+2+B5UOh0aviM9BPiPP4P0u5xOcM35yMr5zgL/jrr8rE6xbi+8wWg==}
     engines: {node: '>=24'}
     peerDependencies:
       vitest: '>=3.0.0'
@@ -567,12 +585,12 @@ packages:
       vitest:
         optional: true
 
-  '@cloudhal/core-contracts@0.6.5':
-    resolution: {integrity: sha512-HK+Jjk8AVu0SPDrqtTvT9TYWGpaVthhD5RCvAC57aPEX+2INLtO6T8vUVwk7KilCcoqkOnmuAt92jBGPJzqtVw==}
+  '@cloudhal/core-contracts@0.7.3':
+    resolution: {integrity: sha512-kUka58tfvi6UpBcyHLvdM+J/7lekGQcFLy6PipwMUcitL4lziL78a0ZByWsPwiLI7j5sozb2Q5fyy1ZsfgM7mg==}
     engines: {node: '>=24'}
 
-  '@cloudhal/core-ts@0.6.5':
-    resolution: {integrity: sha512-paUN38bsArD87L/SHyHEcSA/5pAUWZC4I49g+MhgDHNkHyljETDTwo3Ev5fmQHjm45NDcj/HowKxVMvpQ7g9eA==}
+  '@cloudhal/core-ts@0.7.3':
+    resolution: {integrity: sha512-AcT0YlkqH9aNeVu0PSJwJ2b7+nNaQe1iSAz8AYDeapeC5sANkLiiMwNtHztwHs9qrhkAOCVWO9RCm6ofE/ZZ4g==}
     engines: {node: '>=24'}
     peerDependencies:
       better-sqlite3: ^13.0.0
@@ -580,12 +598,12 @@ packages:
       better-sqlite3:
         optional: true
 
-  '@cloudhal/mcp-server@0.6.5':
-    resolution: {integrity: sha512-/pnP2oSH/3tww7uTIz7btVfjeNPc40ZSyUvLylWpINviS7XrmTdm2VPFaKRESdW31NdxlNFb8c+tqOM9EHTc0A==}
+  '@cloudhal/mcp-server@0.7.3':
+    resolution: {integrity: sha512-7+8rLbKrGuIMG8M8VS6L0C8VHFcmlfKPwFdTKZWvroEoFLGBX9z860a1MtlZk/a2kZ2rNh9F2J5sEJSRPqLkpw==}
     engines: {node: '>=24'}
 
-  '@cloudhal/schedules@0.6.5':
-    resolution: {integrity: sha512-Q78HA5OakYdmBVZNEGGyluEoQhwjs91lr8oAIGeDJV7nCeYRwayP20eFRYHsEawowo7Y/PskletGhvTI1VjIrA==}
+  '@cloudhal/schedules@0.7.3':
+    resolution: {integrity: sha512-7+OqxPs7nj7mY8Vi4skb44wU5iX6FlT/poV2gquyxOTlo/BsYCyxOLwmDUWfVPxjXJL/Gul+il64ebyvUulLPQ==}
     engines: {node: '>=24'}
     peerDependencies:
       vitest: '>=3.0.0'
@@ -593,8 +611,8 @@ packages:
       vitest:
         optional: true
 
-  '@cloudhal/storage@0.6.5':
-    resolution: {integrity: sha512-CQqyWodEklK1m86zR2DRGOSebbRvq4OG07ZB0+TguxbPU9+fw2K3/AnGZ5XGqWGv7V1YFjjjkOzZUXWV21/Bxg==}
+  '@cloudhal/storage@0.7.3':
+    resolution: {integrity: sha512-N4ELSOS/3lNhhoEMIyN0IwCam0nHaqs9brZUa3ZFqS4wAgNhWzQvbDl/dPySRDMnyK6q8z4vKI7/dWhTyQ9Wag==}
     engines: {node: '>=24'}
     peerDependencies:
       better-sqlite3: ^13.0.0
@@ -1304,8 +1322,8 @@ packages:
   bail@2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
 
-  better-auth@1.7.17:
-    resolution: {integrity: sha512-jLPt758k4R3kzCE2ie5BV2FXiLtpbINyC6e/OkcZK0aQOAnZdE2oLZofK1cZg3oXVd2GCFo47gnMy7sgykfUhQ==}
+  better-auth@1.7.18:
+    resolution: {integrity: sha512-VmPc441MZhOKYaRHLgJTXl3T4H7tWZiiYJoMSTl0ZhsEKyAjGm1UdJfghZmFMpzNe+1NLCTUoTAARhi58vcd0g==}
     peerDependencies:
       '@lynx-js/react': '*'
       '@prisma/client': ^5.0.0 || ^6.0.0 || ^7.0.0
@@ -1495,8 +1513,8 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
-  entities@8.1.0:
-    resolution: {integrity: sha512-kxL7msIffSuh9aaFAMD7rxAIuTRMAHMeBtgHW2yUdWw732ZNh4MehkF2gdjvtdmikkaIP9bFDDJOPlsvm7avrA==}
+  entities@9.0.0:
+    resolution: {integrity: sha512-oJFNDJg3kTPwAD1cNn2+WmUq4wFoo09npc3Ydf1D7ED4smRiWrsKnaLxykrTWgyGEcusc87P5dxlAleol9kpkg==}
     engines: {node: '>=20.19.0'}
 
   error-stack-parser-es@1.0.5:
@@ -1891,8 +1909,8 @@ packages:
   package-manager-detector@1.9.0:
     resolution: {integrity: sha512-zAMfbta9nPA8AKkA4WdmNAT8R8s6Dk0/xwPsqNnRidMFcLo1YkLuPDTgs2f64XdzS8vbLNnoJ+uUIkgbz7oRHA==}
 
-  parse5@8.0.1:
-    resolution: {integrity: sha512-z1e/HMG90obSGeidlli3hj7cbocou0/wa5HacvI3ASx34PecNjNQeaHNo5WIZpWofN9kgkqV1q5YvXe3F0FoPw==}
+  parse5@8.1.0:
+    resolution: {integrity: sha512-sq3qBFpee5jeocbFbO48VHlGr8sT7mbXS0vxlKN6sottBtJzrOG3998sr0llSZcQAGgfpdmEYAIZE0P9z0dE8w==}
 
   path-to-regexp@6.3.0:
     resolution: {integrity: sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==}
@@ -2444,15 +2462,22 @@ snapshots:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@better-auth/api-key@1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(better-auth@1.7.17)(better-call@1.4.5(zod@4.6.7))':
+  '@better-auth/api-key@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))':
     dependencies:
-      '@better-auth/core': 1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
-      better-auth: 1.7.17
+      better-auth: 1.7.18
       better-call: 1.4.5(zod@4.6.7)
       zod: 4.6.7
 
-  '@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)':
+  '@better-auth/cimd@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/oauth-provider@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7)))(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))':
+    dependencies:
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/oauth-provider': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))
+      better-auth: 1.7.18
+      better-call: 1.4.5(zod@4.6.7)
+
+  '@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)':
     dependencies:
       '@better-auth/utils': 0.5.1
       '@better-fetch/fetch': 1.3.3
@@ -2463,48 +2488,63 @@ snapshots:
       nanostores: 1.5.5
       zod: 4.6.7
 
-  '@better-auth/drizzle-adapter@1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
+  '@better-auth/drizzle-adapter@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
     dependencies:
-      '@better-auth/core': 1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
 
-  '@better-auth/kysely-adapter@1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(kysely@0.29.7)':
+  '@better-auth/kysely-adapter@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(kysely@0.29.7)':
     dependencies:
-      '@better-auth/core': 1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
     optionalDependencies:
       kysely: 0.29.7
 
-  '@better-auth/memory-adapter@1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
+  '@better-auth/mcp@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))':
     dependencies:
-      '@better-auth/core': 1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/oauth-provider': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))
+      better-auth: 1.7.18
+      better-call: 1.4.5(zod@4.6.7)
+      jose: 6.2.12
+    transitivePeerDependencies:
+      - '@better-auth/utils'
+      - '@better-fetch/fetch'
+
+  '@better-auth/memory-adapter@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
+    dependencies:
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
 
-  '@better-auth/mongo-adapter@1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
+  '@better-auth/mongo-adapter@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
     dependencies:
-      '@better-auth/core': 1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
 
-  '@better-auth/prisma-adapter@1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
+  '@better-auth/oauth-provider@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))':
     dependencies:
-      '@better-auth/core': 1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
-      '@better-auth/utils': 0.5.1
-
-  '@better-auth/telemetry@1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)':
-    dependencies:
-      '@better-auth/core': 1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
       '@better-fetch/fetch': 1.3.3
+      better-auth: 1.7.18
+      better-call: 1.4.5(zod@4.6.7)
+      jose: 6.2.12
+      zod: 4.6.7
 
-  '@better-auth/utils@0.5.0':
+  '@better-auth/prisma-adapter@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
     dependencies:
-      '@noble/hashes': 2.4.0
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/utils': 0.5.1
+
+  '@better-auth/telemetry@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)':
+    dependencies:
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/utils': 0.5.1
+      '@better-fetch/fetch': 1.3.3
 
   '@better-auth/utils@0.5.1':
     dependencies:
       '@noble/hashes': 2.4.0
-
-  '@better-fetch/fetch@1.3.2': {}
 
   '@better-fetch/fetch@1.3.3': {}
 
@@ -2592,41 +2632,45 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20261012.1':
     optional: true
 
-  '@cloudhal/agent-runtime@0.6.5(better-sqlite3@13.0.3)':
+  '@cloudhal/agent-runtime@0.7.3(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.6.5
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.7.3
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
     transitivePeerDependencies:
       - better-sqlite3
       - miniflare
       - vitest
 
-  '@cloudhal/analytics@0.6.5(better-sqlite3@13.0.3)':
+  '@cloudhal/analytics@0.7.3(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.6.5
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.7.3
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
       web-vitals: 6.2.3
     transitivePeerDependencies:
       - better-sqlite3
       - miniflare
 
-  '@cloudhal/api@0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)':
+  '@cloudhal/api@0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)':
     dependencies:
-      '@better-auth/api-key': 1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(better-auth@1.7.17)(better-call@1.4.5(zod@4.6.7))
-      '@better-auth/core': 1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/api-key': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))
+      '@better-auth/cimd': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/oauth-provider@1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7)))(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/mcp': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))
+      '@better-auth/oauth-provider': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-auth@1.7.18)(better-call@1.4.5(zod@4.6.7))
       '@better-auth/utils': 0.5.1
-      '@cloudhal/agent-runtime': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/analytics': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/astro-renderer': 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/comments': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/core-contracts': 0.6.5
-      '@cloudhal/core-ts': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/mcp-server': 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/schedules': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
-      better-auth: 1.7.17
+      '@cloudhal/agent-runtime': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/astro-renderer': 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/comments': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.7.3
+      '@cloudhal/core-ts': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/mcp-server': 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/schedules': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
+      better-auth: 1.7.18
       better-call: 1.4.5(zod@4.6.7)
       hono: 4.13.13
+      jose: 6.2.12
     optionalDependencies:
       '@hono/node-server': 2.1.5(hono@4.13.13)
       better-sqlite3: 13.0.3
@@ -2646,7 +2690,6 @@ snapshots:
       - drizzle-orm
       - esbuild
       - jiti
-      - jose
       - kysely
       - less
       - miniflare
@@ -2671,16 +2714,16 @@ snapshots:
       - yaml
       - zod
 
-  '@cloudhal/astro-renderer@0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)':
+  '@cloudhal/astro-renderer@0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)':
     dependencies:
-      '@cloudhal/analytics': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/comments': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/core-contracts': 0.6.5
-      '@cloudhal/core-ts': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/comments': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.7.3
+      '@cloudhal/core-ts': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
       astro: 7.3.6(jiti@2.7.0)(yaml@2.9.1)
       marked: 18.1.1
-      parse5: 8.0.1
+      parse5: 8.1.0
       vite: 8.3.5(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
     optionalDependencies:
       '@astrojs/cloudflare': 14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1)
@@ -2701,18 +2744,19 @@ snapshots:
       - vitest
       - yaml
 
-  '@cloudhal/cli@0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(hono@4.13.13)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)':
+  '@cloudhal/cli@0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(hono@4.13.13)(jiti@2.7.0)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)':
     dependencies:
-      '@cloudhal/agent-runtime': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/analytics': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/api': 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
-      '@cloudhal/cloudflare': 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)
-      '@cloudhal/comments': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/core-contracts': 0.6.5
-      '@cloudhal/core-ts': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/mcp-server': 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/schedules': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
+      '@cloudhal/agent-runtime': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/api': 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
+      '@cloudhal/astro-renderer': 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/cloudflare': 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)
+      '@cloudhal/comments': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.7.3
+      '@cloudhal/core-ts': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/mcp-server': 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/schedules': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
       '@hono/node-server': 2.1.5(hono@4.13.13)
       astro: 7.3.6(jiti@2.7.0)(yaml@2.9.1)
       better-sqlite3: 13.0.3
@@ -2732,7 +2776,6 @@ snapshots:
       - esbuild
       - hono
       - jiti
-      - jose
       - kysely
       - less
       - miniflare
@@ -2757,16 +2800,16 @@ snapshots:
       - yaml
       - zod
 
-  '@cloudhal/cloudflare@0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)':
+  '@cloudhal/cloudflare@0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)':
     dependencies:
-      '@cloudhal/agent-runtime': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/analytics': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/api': 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
-      '@cloudhal/comments': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/core-ts': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/mcp-server': 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/schedules': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
+      '@cloudhal/agent-runtime': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/api': 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(@better-fetch/fetch@1.3.3)(@hono/node-server@2.1.5(hono@4.13.13))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(kysely@0.29.7)(nanostores@1.5.5)(yaml@2.9.1)(zod@4.6.7)
+      '@cloudhal/comments': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/core-ts': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/mcp-server': 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/schedules': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
       zod: 4.6.7
     transitivePeerDependencies:
       - '@astrojs/cloudflare'
@@ -2786,7 +2829,6 @@ snapshots:
       - drizzle-orm
       - esbuild
       - jiti
-      - jose
       - kysely
       - less
       - miniflare
@@ -2810,25 +2852,25 @@ snapshots:
       - vue
       - yaml
 
-  '@cloudhal/comments@0.6.5(better-sqlite3@13.0.3)':
+  '@cloudhal/comments@0.7.3(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.6.5
-      '@cloudhal/core-ts': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.7.3
+      '@cloudhal/core-ts': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
     transitivePeerDependencies:
       - better-sqlite3
       - miniflare
 
-  '@cloudhal/core-contracts@0.6.5':
+  '@cloudhal/core-contracts@0.7.3':
     dependencies:
       ajv: 8.20.0
       ajv-formats: 3.0.1
 
-  '@cloudhal/core-ts@0.6.5(better-sqlite3@13.0.3)':
+  '@cloudhal/core-ts@0.7.3(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.6.5
-      '@cloudhal/schedules': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.7.3
+      '@cloudhal/schedules': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
       marked: 18.1.1
       temporal-polyfill: 1.0.6
     optionalDependencies:
@@ -2837,16 +2879,16 @@ snapshots:
       - miniflare
       - vitest
 
-  '@cloudhal/mcp-server@0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)':
+  '@cloudhal/mcp-server@0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)':
     dependencies:
-      '@cloudhal/agent-runtime': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/analytics': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/astro-renderer': 0.6.5(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      '@cloudhal/comments': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/core-contracts': 0.6.5
-      '@cloudhal/core-ts': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/schedules': 0.6.5(better-sqlite3@13.0.3)
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
+      '@cloudhal/agent-runtime': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/analytics': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/astro-renderer': 0.7.3(@astrojs/cloudflare@14.3.4(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.151.1)(yaml@2.9.1))(astro@7.3.6(jiti@2.7.0)(yaml@2.9.1))(better-sqlite3@13.0.3)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      '@cloudhal/comments': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.7.3
+      '@cloudhal/core-ts': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/schedules': 0.7.3(better-sqlite3@13.0.3)
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
       '@modelcontextprotocol/server': 2.3.1
     transitivePeerDependencies:
       - '@astrojs/cloudflare'
@@ -2867,18 +2909,18 @@ snapshots:
       - vitest
       - yaml
 
-  '@cloudhal/schedules@0.6.5(better-sqlite3@13.0.3)':
+  '@cloudhal/schedules@0.7.3(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.6.5
-      '@cloudhal/storage': 0.6.5(better-sqlite3@13.0.3)
+      '@cloudhal/core-contracts': 0.7.3
+      '@cloudhal/storage': 0.7.3(better-sqlite3@13.0.3)
       temporal-polyfill: 1.0.6
     transitivePeerDependencies:
       - better-sqlite3
       - miniflare
 
-  '@cloudhal/storage@0.6.5(better-sqlite3@13.0.3)':
+  '@cloudhal/storage@0.7.3(better-sqlite3@13.0.3)':
     dependencies:
-      '@cloudhal/core-contracts': 0.6.5
+      '@cloudhal/core-contracts': 0.7.3
     optionalDependencies:
       better-sqlite3: 13.0.3
 
@@ -3476,15 +3518,15 @@ snapshots:
 
   bail@2.0.2: {}
 
-  better-auth@1.7.17:
+  better-auth@1.7.18:
     dependencies:
-      '@better-auth/core': 1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
-      '@better-auth/drizzle-adapter': 1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
-      '@better-auth/kysely-adapter': 1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(kysely@0.29.7)
-      '@better-auth/memory-adapter': 1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
-      '@better-auth/mongo-adapter': 1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
-      '@better-auth/prisma-adapter': 1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
-      '@better-auth/telemetry': 1.7.17(@better-auth/core@1.7.17(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)
+      '@better-auth/core': 1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5)
+      '@better-auth/drizzle-adapter': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
+      '@better-auth/kysely-adapter': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(kysely@0.29.7)
+      '@better-auth/memory-adapter': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
+      '@better-auth/mongo-adapter': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
+      '@better-auth/prisma-adapter': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
+      '@better-auth/telemetry': 1.7.18(@better-auth/core@1.7.18(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(better-call@1.4.5(zod@4.6.7))(jose@6.2.12)(kysely@0.29.7)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)
       '@better-auth/utils': 0.5.1
       '@better-fetch/fetch': 1.3.3
       '@noble/ciphers': 2.4.0
@@ -3500,8 +3542,8 @@ snapshots:
 
   better-call@1.4.5(zod@4.6.7):
     dependencies:
-      '@better-auth/utils': 0.5.0
-      '@better-fetch/fetch': 1.3.2
+      '@better-auth/utils': 0.5.1
+      '@better-fetch/fetch': 1.3.3
       rou3: 0.9.2
       set-cookie-parser: 3.1.4
     optionalDependencies:
@@ -3612,7 +3654,7 @@ snapshots:
 
   entities@4.5.0: {}
 
-  entities@8.1.0: {}
+  entities@9.0.0: {}
 
   error-stack-parser-es@1.0.5: {}
 
@@ -3978,9 +4020,9 @@ snapshots:
 
   package-manager-detector@1.9.0: {}
 
-  parse5@8.0.1:
+  parse5@8.1.0:
     dependencies:
-      entities: 8.1.0
+      entities: 9.0.0
 
   path-to-regexp@6.3.0: {}
 
